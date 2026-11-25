@@ -77,7 +77,7 @@
         html += interlude('assets/interlude-1.jpg', '把复杂的系统讲清楚，<br>让初学者也能走进去。', 'CRYSTAL BOOKS · 序');
       }
       if (i === 14) {
-        html += interlude('assets/interlude-2.jpg', '每一个数字都有出处，<br>每一张插图都由代码画出。', 'CRYSTAL BOOKS · 约');
+        html += interlude('assets/interlude-2.jpg', '先讲清楚为什么，<br>再讲怎么做。', 'CRYSTAL BOOKS · 约');
       }
     });
     list.innerHTML = html;
