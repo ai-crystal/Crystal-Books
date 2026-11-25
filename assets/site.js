@@ -25,8 +25,8 @@
       (b.available ? '' : '<span class="badge">待发布</span>') + '</div>';
     var main = '<h3>' + esc(b.title) + '</h3>' +
       (b.one ? '<p>' + esc(b.one) + '</p>' : '');
-    var foot = '<div class="book-foot"><span>' + b.chapters + ' 章 · ' + b.pages + ' 页</span>' +
-      '<span class="go">' + (b.available ? '在线阅读 ' + ICON_ARROW : '') + '</span></div>';
+    var foot = '<div class="book-foot">' +
+      (b.available ? '<span class="go">在线阅读 ' + ICON_ARROW + '</span>' : '') + '</div>';
     var cls = 'book' + (b.available ? '' : ' is-soon');
     if (b.available) {
       return '<a class="' + cls + '" href="' + esc(b.url) + '" target="_blank" rel="noopener" data-i="' + j + '">' +
@@ -42,14 +42,11 @@
       ? '<a class="enter" href="' + esc(s.site + '#/README') + '" target="_blank" rel="noopener">进入系列 ' + ICON_EXT + '</a>'
       : '<span class="enter is-soon">待发布</span>';
     var paras = s.intro.map(function (p) { return '<p>' + esc(p) + '</p>'; }).join('');
-    var gh = s.repo
-      ? '<a class="meta-link" href="' + esc(s.repo) + '" target="_blank" rel="noopener">GitHub</a>'
-      : '';
     return '' +
       '<section class="series reveal" id="series-' + n + '" data-index="' + n + '" style="--accent:' + esc(s.theme) + '">' +
         '<div class="series-head">' +
           '<div class="series-title">' +
-            '<p class="kicker">' + (s.available ? 'SERIES ' + n : 'SERIES ' + n + ' · 整理中') + ' · ' + s.books.length + ' 册</p>' +
+            '<p class="kicker">SERIES ' + n + (s.available ? '' : ' · 整理中') + '</p>' +
             '<h2>' + esc(s.name) + '</h2>' +
             '<p class="sub">' + esc(s.subtitle) + '</p>' +
           '</div>' +
@@ -57,7 +54,6 @@
         '</div>' +
         '<div class="series-body">' +
           '<div class="desc">' + paras +
-            '<div class="meta"><span>' + s.books.length + ' 册</span><span>' + s.pages + ' 页</span>' + gh + '</div>' +
           '</div>' +
           '<div class="books">' + cards + '</div>' +
         '</div>' +
@@ -74,10 +70,10 @@
     DATA.forEach(function (s, i) {
       html += seriesHTML(s, i);
       if (i === 8) {
-        html += interlude('assets/interlude-1.jpg', '把复杂的系统讲清楚，<br>让初学者也能走进去。', 'CRYSTAL BOOKS · 序');
+        html += interlude('assets/band-2.jpg', '把复杂的系统讲清楚，<br>让初学者也能走进去。', 'CRYSTAL BOOKS · 序');
       }
       if (i === 14) {
-        html += interlude('assets/interlude-2.jpg', '先讲清楚为什么，<br>再讲怎么做。', 'CRYSTAL BOOKS · 约');
+        html += interlude('assets/band-1.jpg', '先讲清楚为什么，<br>再讲怎么做。', 'CRYSTAL BOOKS · 约');
       }
     });
     list.innerHTML = html;
@@ -163,7 +159,7 @@
     list.querySelectorAll('.interlude').forEach(function (el) {
       el.classList.toggle('is-filtered', !!q);
     });
-    note.textContent = q ? '找到 ' + total + ' 本 / 共 ' + window.BOOK_TOTAL + ' 本' : '';
+    note.textContent = q ? '找到 ' + total + ' 个结果' : '';
     empty.classList.toggle('show', !!q && total === 0);
   }
 
