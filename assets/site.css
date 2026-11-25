@@ -314,7 +314,7 @@ img { max-width: 100%; display: block; }
 
 /* ---------- intro ---------- */
 
-.intro { padding: clamp(76px, 10vw, 148px) 0 clamp(46px, 6vw, 80px); }
+.intro { padding-top: clamp(76px, 10vw, 148px); padding-bottom: clamp(46px, 6vw, 80px); }
 .intro-grid {
   display: grid;
   grid-template-columns: 1.05fr 1fr;
