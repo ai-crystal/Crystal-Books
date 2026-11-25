@@ -22,6 +22,7 @@ import argparse
 import json
 import re
 import sys
+import time
 import urllib.request
 from pathlib import Path
 
@@ -148,18 +149,25 @@ def count_chapters(repo: Path, slug: str) -> int:
 _LIVE_CACHE: dict[str, bool] = {}
 
 
-def is_live(url: str) -> bool:
+def is_live(url: str, attempts: int = 3) -> bool:
+    """探测线上站点是否 200。即使有一次失败也不要随便把系列改成“待发布”，重试几次。"""
     if not url:
         return False
     if url in _LIVE_CACHE:
         return _LIVE_CACHE[url]
     ok = False
-    try:
-        req = urllib.request.Request(url, method="GET", headers={"User-Agent": "crystal-books-sync"})
-        with urllib.request.urlopen(req, timeout=15) as r:
-            ok = r.status == 200
-    except Exception:
-        ok = False
+    for i in range(attempts):
+        try:
+            req = urllib.request.Request(url, method="GET",
+                                         headers={"User-Agent": "crystal-books-sync",
+                                                  "Cache-Control": "no-cache"})
+            with urllib.request.urlopen(req, timeout=20) as r:
+                ok = r.status == 200
+                if ok:
+                    break
+        except Exception:
+            ok = False
+        time.sleep(3)
     _LIVE_CACHE[url] = ok
     return ok
 
