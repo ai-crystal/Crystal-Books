@@ -473,17 +473,11 @@ img { max-width: 100%; display: block; }
 }
 .enter svg { width: 13px; height: 13px; transition: transform .3s; }
 .enter:hover { color: var(--accent, var(--gold)); }
-.enter:not(.is-soon) { position: relative; isolation: isolate; }
-.enter:not(.is-soon)::before {
-  content: "";
-  position: absolute;
-  inset: -12px -20px -12px -20px;
-  z-index: -1;
-  pointer-events: none;
-  border-radius: 24px;
-  background: rgba(247, 246, 242, var(--halo, .93));
-  filter: blur(16px);
+.enter:not(.is-soon) {
+  color: #232a34;
+  text-shadow: 0 0 4px rgba(247, 246, 242, .98), 0 0 14px rgba(247, 246, 242, .92), 0 0 26px rgba(247, 246, 242, .8);
 }
+.enter:not(.is-soon) svg { filter: drop-shadow(0 0 3px rgba(247, 246, 242, .95)); }
 .enter:hover svg { transform: translate(3px, -3px); }
 .enter.is-soon {
   color: #9aa2ad;
