@@ -51,8 +51,8 @@ SERIES = {
     "黑客技术与安全原理": ("黑客技术", "https://ai-crystal.github.io/Hacker-Techniques/", "https://github.com/ai-crystal/Hacker-Techniques"),
     "人体参数化技术": ("人体参数化技术/人体参数化技术学习", "https://ai-crystal.github.io/Human-body-Param/", "https://github.com/ai-crystal/Human-body-Param"),
     "光的语言": ("摄影学技术", "https://dezeming.github.io/photography-book/", ""),
-    "黑箱之内": ("深度学习的可解释性研究", "", ""),
-    "测试时训练技术": ("深度学习的测试时训练技术", "https://dezeming.github.io/test-time-training/", "https://github.com/Dezeming/test-time-training"),
+    "黑箱之内": ("深度学习的可解释性研究", "https://ai-crystal.github.io/Interpretable-NN/", "https://github.com/ai-crystal/Interpretable-NN"),
+    "测试时训练技术": ("深度学习的测试时训练技术", "https://ai-crystal.github.io/Test-Time-Training/", "https://github.com/ai-crystal/Test-Time-Training"),
     "全脑仿真": ("全脑连接模拟技术", "https://ai-crystal.github.io/Brain-Connectivity-Simulation/", "https://github.com/ai-crystal/Brain-Connectivity-Simulation"),
 }
 
