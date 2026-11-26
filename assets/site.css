@@ -903,3 +903,137 @@ a:focus-visible, button:focus-visible, input:focus-visible {
   .cat-hero .cat-desc { font-size: .94rem; }
   .series { background-image: linear-gradient(180deg, rgba(247, 246, 242, .93) 0%, rgba(247, 246, 242, .965) 100%), var(--series-bg, none); }
 }
+
+/* ============================================================
+   轻量特效层（fx.js 驱动，仅 transform / opacity 合成）
+   ============================================================ */
+
+/* 顶部阅读进度 */
+.fx-bar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 120;
+  width: 100%;
+  height: 2px;
+  transform: scaleX(0);
+  transform-origin: 0 50%;
+  background: linear-gradient(90deg, rgba(164, 116, 42, .0), var(--gold) 18%, #c8a468 62%, rgba(164, 116, 42, .55));
+  pointer-events: none;
+  will-change: transform;
+}
+
+/* 首屏颗粒纹理（内联 SVG，约 0.3 KB） */
+.hero { isolation: isolate; }
+.hero::after,
+.cat-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.78' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)' opacity='.45'/%3E%3C/svg%3E");
+  background-size: 140px 140px;
+  opacity: .05;
+  mix-blend-mode: multiply;
+}
+.cat-hero { isolation: isolate; }
+
+/* 首屏浮尘画布 */
+.fx-stars {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  opacity: 0;
+  animation: fxIn .9s .15s var(--ease) forwards;
+}
+.hero-inner,
+.cat-hero > .wrap { position: relative; z-index: 2; }
+
+/* 卡片光斑 */
+.book,
+.cat-card { position: relative; }
+.book::after,
+.cat-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity .4s var(--ease);
+  background: radial-gradient(240px circle at var(--mx, 50%) var(--my, 50%),
+              color-mix(in srgb, var(--accent, var(--gold)) 14%, transparent), transparent 66%);
+}
+.book:hover::after,
+.cat-card:hover::after { opacity: 1; }
+.book > *,
+.cat-card > * { position: relative; z-index: 1; }
+.book:hover .book-foot .go svg { transform: translateX(5px); }
+
+/* 书卡倾斜（只有悬浮书卡，网格里的分类卡保持不动） */
+.book { transform-origin: 50% 50%; }
+.book.is-tilt { z-index: 3; will-change: transform; transition: transform .12s linear, border-color .35s, box-shadow .35s; }
+
+/* 系列大数字视差 */
+.series::before {
+  transform: translate3d(0, calc(var(--np, 0) * -34px), 0);
+  transition: -webkit-text-stroke-color .45s;
+}
+.series:hover::before { -webkit-text-stroke-color: rgba(164, 116, 42, .34); }
+
+/* 品牌标记与按钮微交互 */
+.brand .mark { transition: transform .55s var(--ease); }
+.brand:hover .mark { transform: rotate(90deg); }
+
+.cta { position: relative; overflow: hidden; }
+.cta::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -70%;
+  width: 45%;
+  height: 100%;
+  background: linear-gradient(100deg, transparent, rgba(255, 255, 255, .30), transparent);
+  transform: skewX(-18deg);
+  transition: left .65s var(--ease);
+  pointer-events: none;
+}
+.cta:hover::after { left: 130%; }
+
+/* 页面进入 */
+@keyframes fxIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+main { animation: fxIn .6s var(--ease) both; }
+
+/* 回到顶部按钮轻微脉冲 */
+.to-top.show::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  border: 1px solid var(--gold);
+  opacity: 0;
+  animation: fxRing 3.6s var(--ease) infinite;
+}
+@keyframes fxRing {
+  0%, 70% { opacity: 0; transform: scale(1); }
+  78% { opacity: .5; }
+  100% { opacity: 0; transform: scale(1.22); }
+}
+
+/* 无悬停设备关掉光斑与倾斜 */
+@media (hover: none) {
+  .book::after, .cat-card::after { display: none; }
+  .book.is-tilt { transform: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fx-stars { display: none; }
+  main { animation: none; }
+  .to-top.show::before { animation: none; }
+  .cta::after { display: none; }
+  .scroll-cue i { animation: none; opacity: .6; transform: none; }
+  .series::before { transform: none; }
+}
