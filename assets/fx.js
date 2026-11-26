@@ -243,8 +243,7 @@
     });
   }
 
-  /* ---------- 滚动：进度条 + 大数字视差 ---------- */
-  var secs = document.querySelectorAll('.series');
+  /* ---------- 滚动：顶部进度条 ---------- */
   var scrolling = false;
 
   function onScroll() {
@@ -252,16 +251,6 @@
     var y = window.scrollY || document.documentElement.scrollTop;
     var max = document.documentElement.scrollHeight - window.innerHeight;
     bar.style.transform = 'scaleX(' + (max > 0 ? Math.min(1, y / max) : 0).toFixed(4) + ')';
-
-    if (!secs.length || reduce.matches) return;
-    var vh = window.innerHeight;
-    for (var i = 0; i < secs.length; i++) {
-      var el = secs[i];
-      var r = el.getBoundingClientRect();
-      if (r.top > vh + 160 || r.bottom < -160) continue;
-      var p = (r.top + r.height / 2 - vh / 2) / vh;
-      el.style.setProperty('--np', Math.max(-1, Math.min(1, p)).toFixed(3));
-    }
   }
 
   window.addEventListener('scroll', function () {

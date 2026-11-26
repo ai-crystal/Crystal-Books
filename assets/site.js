@@ -31,8 +31,7 @@
   }
 
   function bookCard(b, j) {
-    var top = '<div class="book-top"><span class="bnum">' + pad(j + 1) + '</span>' +
-      (b.available ? '' : '<span class="badge">待发布</span>') + '</div>';
+    var top = b.available ? '' : '<div class="book-top"><span class="badge">待发布</span></div>';
     var main = '<h3>' + esc(b.title) + '</h3>' +
       (b.one ? '<p>' + esc(b.one) + '</p>' : '');
     var foot = '<div class="book-foot">' +
@@ -52,12 +51,13 @@
       ? '<a class="enter" href="' + esc(s.site + '#/README') + '" target="_blank" rel="noopener">进入系列 ' + ICON_EXT + '</a>'
       : '<span class="enter is-soon">待发布</span>';
     var paras = s.intro.map(function (p) { return '<p>' + esc(p) + '</p>'; }).join('');
-    var bg = s.bg ? ";--series-bg:" + bgUrl(s.bg) : '';
+    var bg = (s.bg ? ";--series-bg:" + bgUrl(s.bg) : '') +
+      (s.wash != null ? ";--wash:" + s.wash : '');
     return '' +
-      '<section class="series reveal" id="series-' + n + '" data-name="' + esc(s.name) + '" data-index="' + n + '" style="--accent:' + esc(s.theme) + bg + '">' +
+      '<section class="series reveal" id="series-' + n + '" data-name="' + esc(s.name) + '" style="--accent:' + esc(s.theme) + bg + '">' +
         '<div class="series-head">' +
           '<div class="series-title">' +
-            '<p class="kicker">SERIES ' + n + (s.available ? '' : ' · 整理中') + '</p>' +
+            '<p class="kicker">SERIES' + (s.available ? '' : ' · 整理中') + '</p>' +
             '<h2>' + esc(s.name) + '</h2>' +
             '<p class="sub">' + esc(s.subtitle) + '</p>' +
           '</div>' +
@@ -81,7 +81,6 @@
     if (!catIndex) return;
     catIndex.innerHTML = CATS.map(function (c, i) {
       return '<a class="cat-card reveal" href="' + esc(c.id) + '.html" style="--c:' + esc(c.color) + '">' +
-        '<span class="no">' + pad(i + 1) + '</span>' +
         '<b>' + esc(c.name) + '</b>' +
         '<p>' + esc(c.desc) + '</p>' +
         '<span class="cat-go">查看书目 ' + ICON_ARROW + '</span></a>';
@@ -97,8 +96,9 @@
 
     if (catHero) {
       catHero.style.setProperty('--catbg', bgUrl(cat.bg));
+      if (cat.wash != null) catHero.style.setProperty('--catwash', cat.wash);
       catHero.innerHTML = '<div class="wrap">' +
-        '<p class="cat-kicker">CATEGORY ' + pad(idx + 1) + '</p>' +
+        '<p class="cat-kicker">CATEGORY</p>' +
         '<h1>' + esc(cat.name) + '</h1>' +
         '<p class="cat-desc">' + esc(cat.desc) + '</p>' +
         '<a class="back" href="index.html">← 全部分类</a>' +
