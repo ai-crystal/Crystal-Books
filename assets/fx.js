@@ -9,6 +9,31 @@
   var saveData = !!(navigator.connection && navigator.connection.saveData);
   var DPR = Math.min(window.devicePixelRatio || 1, 1.5);
 
+  /* ---------- 背景浓度（淡 / 中 / 浓） ---------- */
+  var VEIL_KEY = 'cb-veil';
+  var veilState = 'mid';
+  try {
+    var savedVeil = localStorage.getItem(VEIL_KEY);
+    if (savedVeil === 'light' || savedVeil === 'mid' || savedVeil === 'strong') veilState = savedVeil;
+  } catch (e) {}
+  document.documentElement.setAttribute('data-veil', veilState);
+
+  var veilBtns = document.querySelectorAll('.veil-switch button');
+  function paintVeil() {
+    Array.prototype.forEach.call(veilBtns, function (b) {
+      b.classList.toggle('on', b.getAttribute('data-veil') === veilState);
+    });
+  }
+  paintVeil();
+  Array.prototype.forEach.call(veilBtns, function (b) {
+    b.addEventListener('click', function () {
+      veilState = b.getAttribute('data-veil');
+      document.documentElement.setAttribute('data-veil', veilState);
+      paintVeil();
+      try { localStorage.setItem(VEIL_KEY, veilState); } catch (e) {}
+    });
+  });
+
   /* ---------- 顶部阅读进度 ---------- */
   var bar = document.createElement('div');
   bar.className = 'fx-bar';
