@@ -53,6 +53,7 @@ SERIES = {
     "光的语言": ("摄影学技术", "https://dezeming.github.io/photography-book/", ""),
     "黑箱之内": ("深度学习的可解释性研究", "", ""),
     "测试时训练技术": ("深度学习的测试时训练技术", "https://dezeming.github.io/test-time-training/", "https://github.com/Dezeming/test-time-training"),
+    "全脑仿真": ("全脑连接模拟技术", "https://ai-crystal.github.io/Brain-Connectivity-Simulation/", "https://github.com/ai-crystal/Brain-Connectivity-Simulation"),
 }
 
 SEP_RE = re.compile(r"^[-:\s]+$")

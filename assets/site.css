@@ -800,3 +800,32 @@ a:focus-visible, button:focus-visible, input:focus-visible {
   .cat-index { grid-template-columns: 1fr; }
   .cat-head { padding-top: 44px; }
 }
+
+/* hero note & intro paragraph */
+.hero-sub.hero-lead {
+  margin-bottom: .85em;
+  font-size: clamp(1.05rem, 1.6vw, 1.2rem);
+  font-weight: 500;
+  color: var(--ink);
+}
+.hero-note { max-width: 60ch; margin: 0 0 34px; }
+.hero-note p {
+  margin: 0 0 .55em;
+  color: #4c5663;
+  font-size: .92rem;
+  line-height: 1.9;
+}
+.hero-note p:last-child { margin-bottom: 0; }
+.intro-text { font-size: .98rem; line-height: 1.95; color: var(--ink-soft); margin: 0; }
+@media (max-width: 760px) {
+  .hero-note { margin-bottom: 28px; }
+  .hero-note p { font-size: .88rem; line-height: 1.85; }
+}
+
+@media (min-width: 761px) and (max-height: 840px) {
+  .hero-inner { padding-top: 92px; padding-bottom: 56px; }
+  .hero h1 { font-size: clamp(3.2rem, 9vw, 6.9rem); }
+  .hero-sub.hero-lead { font-size: 1rem; }
+  .hero-note p { font-size: .86rem; line-height: 1.8; }
+  .scroll-cue { display: none; }
+}
