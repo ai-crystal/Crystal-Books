@@ -4,7 +4,10 @@
 
   var DATA = window.BOOK_DATA || [];
   var CATS = window.CATEGORIES || [];
-  var list = document.getElementById('series-list');
+  var PAGE = window.PAGE || { mode: 'home', cat: '' };
+
+  var root = document.getElementById('series-list');
+  var catHero = document.getElementById('cat-hero');
   var catIndex = document.getElementById('cat-index');
   var chips = document.getElementById('chips');
   var note = document.getElementById('search-note');
@@ -22,8 +25,10 @@
 
   function pad(n) { return (n < 10 ? '0' : '') + n; }
 
-  var byName = {};
-  DATA.forEach(function (s) { byName[s.name] = s; });
+  function bgUrl(p) {
+    try { return "url('" + new URL(p, window.location.href).href + "')"; }
+    catch (e) { return "url('" + p + "')"; }
+  }
 
   function bookCard(b, j) {
     var top = '<div class="book-top"><span class="bnum">' + pad(j + 1) + '</span>' +
@@ -47,8 +52,9 @@
       ? '<a class="enter" href="' + esc(s.site + '#/README') + '" target="_blank" rel="noopener">进入系列 ' + ICON_EXT + '</a>'
       : '<span class="enter is-soon">待发布</span>';
     var paras = s.intro.map(function (p) { return '<p>' + esc(p) + '</p>'; }).join('');
+    var bg = s.bg ? ";--series-bg:" + bgUrl(s.bg) : '';
     return '' +
-      '<section class="series reveal" id="series-' + n + '" data-name="' + esc(s.name) + '" data-index="' + n + '" style="--accent:' + esc(s.theme) + '">' +
+      '<section class="series reveal" id="series-' + n + '" data-name="' + esc(s.name) + '" data-index="' + n + '" style="--accent:' + esc(s.theme) + bg + '">' +
         '<div class="series-head">' +
           '<div class="series-title">' +
             '<p class="kicker">SERIES ' + n + (s.available ? '' : ' · 整理中') + '</p>' +
@@ -64,57 +70,56 @@
       '</section>';
   }
 
-  function interlude(src, quote, cite) {
-    return '<section class="interlude" style="background-image:url(\'' + src + '\')">' +
-      '<div><blockquote>' + quote + '</blockquote><cite>' + cite + '</cite></div></section>';
+  function renderChips() {
+    chips.innerHTML = CATS.map(function (c) {
+      var cls = 'chip' + (PAGE.cat === c.id ? ' active' : '');
+      return '<a class="' + cls + '" href="' + esc(c.id) + '.html">' + esc(c.name) + '</a>';
+    }).join('');
   }
 
-  function render() {
-    var html = '';
-    var gi = 0;
-
-    CATS.forEach(function (cat, ci) {
-      var items = DATA.filter(function (s) { return s.cat === cat.id; });
-      if (!items.length) return;
-
-      html += '<section class="category" id="cat-' + cat.id + '" data-cat="' + cat.id + '" style="--cat:' + esc(cat.color) + '">';
-      html += '<div class="cat-head reveal">' +
-        '<p class="cat-kicker">CATEGORY ' + pad(ci + 1) + '</p>' +
-        '<h2>' + esc(cat.name) + '</h2>' +
-        '<p class="cat-desc">' + esc(cat.desc) + '</p>' +
-        '</div>';
-      html += '<div class="cat-series">';
-      items.forEach(function (s) { html += seriesHTML(s, gi); gi++; });
-      html += '</div></section>';
-
-      if (cat.id === 'ai') {
-        html += interlude('assets/band-2.jpg', '把一件事从头讲起，<br>不跳步。', 'CRYSTAL BOOKS · 序');
-      }
-      if (cat.id === 'software') {
-        html += interlude('assets/band-1.jpg', '先讲清楚为什么，<br>再讲怎么做。', 'CRYSTAL BOOKS · 约');
-      }
-    });
-
-    list.innerHTML = html;
-
+  function renderHome() {
+    if (!catIndex) return;
     catIndex.innerHTML = CATS.map(function (c, i) {
-      return '<a class="cat-card" href="#cat-' + c.id + '" style="--c:' + esc(c.color) + '">' +
+      return '<a class="cat-card reveal" href="' + esc(c.id) + '.html" style="--c:' + esc(c.color) + '">' +
         '<span class="no">' + pad(i + 1) + '</span>' +
         '<b>' + esc(c.name) + '</b>' +
-        '<p>' + esc(c.desc) + '</p></a>';
-    }).join('');
-
-    chips.innerHTML = CATS.map(function (c, i) {
-      return '<a class="chip" href="#cat-' + c.id + '" data-i="' + i + '">' + esc(c.name) + '</a>';
+        '<p>' + esc(c.desc) + '</p>' +
+        '<span class="cat-go">查看书目 ' + ICON_ARROW + '</span></a>';
     }).join('');
   }
 
-  render();
+  function renderCategory() {
+    var idx = -1;
+    CATS.forEach(function (c, i) { if (c.id === PAGE.cat) idx = i; });
+    if (idx < 0) return;
+    var cat = CATS[idx];
+    var items = DATA.filter(function (s) { return s.cat === cat.id; });
 
-  var categories = Array.prototype.slice.call(list.querySelectorAll('.category'));
-  var chipEls = Array.prototype.slice.call(chips.querySelectorAll('.chip'));
+    if (catHero) {
+      catHero.style.setProperty('--catbg', bgUrl(cat.bg));
+      catHero.innerHTML = '<div class="wrap">' +
+        '<p class="cat-kicker">CATEGORY ' + pad(idx + 1) + '</p>' +
+        '<h1>' + esc(cat.name) + '</h1>' +
+        '<p class="cat-desc">' + esc(cat.desc) + '</p>' +
+        '<a class="back" href="index.html">← 全部分类</a>' +
+        '</div>';
+    }
 
-  /* ---- scroll reveal ---- */
+    if (root) {
+      root.innerHTML = items.map(function (s) {
+        return seriesHTML(s, DATA.indexOf(s));
+      }).join('');
+    }
+  }
+
+  renderChips();
+  if (PAGE.mode === 'home') {
+    renderHome();
+  } else {
+    renderCategory();
+  }
+
+  /* ---- reveal ---- */
   var revealEls = Array.prototype.slice.call(document.querySelectorAll('.reveal'));
   if ('IntersectionObserver' in window) {
     var io = new IntersectionObserver(function (entries) {
@@ -123,15 +128,6 @@
       });
     }, { threshold: 0.06, rootMargin: '0px 0px -8% 0px' });
     revealEls.forEach(function (el) { io.observe(el); });
-
-    var navIO = new IntersectionObserver(function (entries) {
-      entries.forEach(function (e) {
-        if (!e.isIntersecting) return;
-        var idx = categories.indexOf(e.target);
-        chipEls.forEach(function (c, k) { c.classList.toggle('active', k === idx); });
-      });
-    }, { rootMargin: '-40% 0px -55% 0px' });
-    categories.forEach(function (c) { navIO.observe(c); });
   } else {
     revealEls.forEach(function (el) { el.classList.add('in'); });
   }
@@ -145,7 +141,7 @@
 
   function onScroll() {
     var y = window.scrollY || document.documentElement.scrollTop;
-    nav.classList.toggle('show', y > 46);
+    nav.classList.toggle('show', PAGE.mode === 'category' || y > 46);
     toTop.classList.toggle('show', y > 720);
     if (heroBg && !reduced) {
       heroBg.style.transform = 'translate3d(0,' + Math.min(y * 0.16, 180) + 'px,0) scale(1.04)';
@@ -161,21 +157,19 @@
     window.scrollTo({ top: 0, behavior: reduced ? 'auto' : 'smooth' });
   });
 
-  /* ---- search ---- */
+  /* ---- search (category pages) ---- */
+  if (!input || !root) return;
+
   function normalize(s) { return String(s || '').toLowerCase().replace(/\s+/g, ' '); }
 
   function filter() {
     var q = normalize(input.value.trim());
-    document.body.classList.toggle('searching', !!q);
     var total = 0;
-    var seriesEls = list.querySelectorAll('.series');
-
-    seriesEls.forEach(function (sec) {
-      var s = byName[sec.getAttribute('data-name')];
+    root.querySelectorAll('.series').forEach(function (sec) {
+      var name = sec.getAttribute('data-name');
+      var s = DATA.filter(function (x) { return x.name === name; })[0];
       if (!s) return;
       var seriesHit = q && normalize(s.name + ' ' + s.subtitle).indexOf(q) >= 0;
-      var cat = CATS.filter(function (c) { return c.id === s.cat; })[0];
-      if (!seriesHit && q && cat && normalize(cat.name).indexOf(q) >= 0) seriesHit = true;
       var visible = 0;
       sec.querySelectorAll('.book').forEach(function (el) {
         var b = s.books[+el.getAttribute('data-i')];
@@ -186,18 +180,6 @@
       sec.classList.toggle('is-filtered', !!q && visible === 0);
       total += visible;
     });
-
-    categories.forEach(function (catEl) {
-      var any = Array.prototype.some.call(catEl.querySelectorAll('.series'), function (sec) {
-        return !sec.classList.contains('is-filtered');
-      });
-      catEl.classList.toggle('is-filtered', !!q && !any);
-    });
-
-    list.querySelectorAll('.interlude').forEach(function (el) {
-      el.classList.toggle('is-filtered', !!q);
-    });
-    catIndex.classList.toggle('is-filtered', !!q);
     note.textContent = q ? '找到 ' + total + ' 个结果' : '';
     empty.classList.toggle('show', !!q && total === 0);
   }
@@ -211,12 +193,5 @@
     if (e.key === '/' && tag !== 'INPUT' && tag !== 'TEXTAREA') {
       e.preventDefault(); nav.classList.add('show'); input.focus();
     }
-  });
-
-  chips.addEventListener('click', function (e) {
-    var a = e.target.closest('.chip');
-    if (!a) return;
-    chipEls.forEach(function (c) { c.classList.remove('active'); });
-    a.classList.add('active');
   });
 })();
