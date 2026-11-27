@@ -1,5 +1,5 @@
 @echo off
-rem 静默更新：给 Windows 计划任务用，输出写进 update.log
+rem silent update for scheduled task; log: update.log
 chcp 65001 >nul
 cd /d "%~dp0\..\.."
 set PY=C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe
