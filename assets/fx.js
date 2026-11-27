@@ -9,31 +9,6 @@
   var saveData = !!(navigator.connection && navigator.connection.saveData);
   var DPR = Math.min(window.devicePixelRatio || 1, 1.5);
 
-  /* ---------- 背景浓度（淡 / 中 / 浓） ---------- */
-  var VEIL_KEY = 'cb-veil';
-  var veilState = 'mid';
-  try {
-    var savedVeil = localStorage.getItem(VEIL_KEY);
-    if (savedVeil === 'light' || savedVeil === 'mid' || savedVeil === 'strong') veilState = savedVeil;
-  } catch (e) {}
-  document.documentElement.setAttribute('data-veil', veilState);
-
-  var veilBtns = document.querySelectorAll('.veil-switch button');
-  function paintVeil() {
-    Array.prototype.forEach.call(veilBtns, function (b) {
-      b.classList.toggle('on', b.getAttribute('data-veil') === veilState);
-    });
-  }
-  paintVeil();
-  Array.prototype.forEach.call(veilBtns, function (b) {
-    b.addEventListener('click', function () {
-      veilState = b.getAttribute('data-veil');
-      document.documentElement.setAttribute('data-veil', veilState);
-      paintVeil();
-      try { localStorage.setItem(VEIL_KEY, veilState); } catch (e) {}
-    });
-  });
-
   /* ---------- 顶部阅读进度 ---------- */
   var bar = document.createElement('div');
   bar.className = 'fx-bar';
@@ -59,7 +34,7 @@
     var x = c.getContext('2d');
     var grd = x.createRadialGradient(R, R, 0, R, R, R);
     grd.addColorStop(0, 'rgba(' + r + ',' + g + ',' + b + ',.95)');
-    grd.addColorStop(.38, 'rgba(' + r + ',' + g + ',' + b + ',.36)');
+    grd.addColorStop(.38, 'rgba(' + r + ',' + g + ',' + b + ',.34)');
     grd.addColorStop(1, 'rgba(' + r + ',' + g + ',' + b + ',0)');
     x.fillStyle = grd;
     x.fillRect(0, 0, R * 2, R * 2);
@@ -75,16 +50,16 @@
     canvas.style.width = W + 'px';
     canvas.style.height = H + 'px';
     ctx.setTransform(DPR, 0, 0, DPR, 0, 0);
-    var n = Math.round(Math.min(54, Math.max(16, (W * H) / 26000)));
+    var n = Math.round(Math.min(48, Math.max(14, (W * H) / 30000)));
     pts = [];
     for (var i = 0; i < n; i++) {
       pts.push({
         x: Math.random() * W,
         y: Math.random() * H,
-        vx: (Math.random() - .5) * .16,
-        vy: -(0.04 + Math.random() * .15),
+        vx: (Math.random() - .5) * .14,
+        vy: -(0.03 + Math.random() * .12),
         s: 3 + Math.random() * 5,
-        a: .14 + Math.random() * .34,
+        a: .12 + Math.random() * .3,
         w: .003 + Math.random() * .01,
         ph: Math.random() * 6.283,
         c: Math.random() < .3 ? 1 : 0
@@ -104,8 +79,7 @@
 
     ctx.clearRect(0, 0, W, H);
 
-    /* 星座连线 */
-    var link2 = 122 * 122;
+    var link2 = 124 * 124;
     ctx.beginPath();
     for (var i = 0; i < pts.length; i++) {
       var p = pts[i];
@@ -119,18 +93,16 @@
         }
       }
     }
-    ctx.strokeStyle = 'rgba(92,102,118,.14)';
+    ctx.strokeStyle = 'rgba(120,118,110,.13)';
     ctx.lineWidth = .6;
     ctx.stroke();
 
-    /* 浮尘 */
     for (var k = 0; k < pts.length; k++) {
       var d = pts[k];
       d.x += d.vx * dt;
       d.y += d.vy * dt;
       d.ph += d.w * dt * 3;
 
-      /* 指针轻推 */
       var px = d.x - pointer.x;
       var py = d.y - pointer.y;
       var dd = px * px + py * py;
@@ -144,7 +116,7 @@
       if (d.x < -14) d.x = W + 10;
       else if (d.x > W + 14) d.x = -10;
 
-      ctx.globalAlpha = d.a * (.62 + .38 * Math.sin(d.ph));
+      ctx.globalAlpha = d.a * (.6 + .4 * Math.sin(d.ph));
       ctx.drawImage(sprites[d.c], d.x - d.s / 2, d.y - d.s / 2, d.s, d.s);
     }
     ctx.globalAlpha = 1;
@@ -171,7 +143,7 @@
     ctx = canvas.getContext('2d', { alpha: true });
     if (ctx) {
       host.appendChild(canvas);
-      sprites = [sprite(120, 128, 142), sprite(164, 116, 42)];
+      sprites = [sprite(126, 128, 138), sprite(170, 132, 62)];
       seed();
       if ('IntersectionObserver' in window) {
         new IntersectionObserver(function (entries) {
@@ -197,7 +169,6 @@
 
   /* ---------- 卡片光斑跟随 ---------- */
   if (fine.matches && !reduce.matches) {
-    var SPOT = '.book, .cat-card';
     var pending = null;
     var queued = false;
 
@@ -206,7 +177,7 @@
       var e = pending;
       pending = null;
       if (!e || !e.target || !e.target.closest) return;
-      var el = e.target.closest(SPOT);
+      var el = e.target.closest('.book, .cat-row');
       if (!el) return;
       var r = el.getBoundingClientRect();
       if (!r.width || !r.height) return;
@@ -221,29 +192,9 @@
         requestAnimationFrame(flush);
       }
     }, { passive: true });
-
-    /* 书卡微倾斜 */
-    Array.prototype.forEach.call(document.querySelectorAll('.book:not(.is-soon)'), function (card) {
-      card.addEventListener('pointerenter', function () {
-        card.classList.add('is-tilt');
-      });
-      card.addEventListener('pointermove', function (e) {
-        var r = card.getBoundingClientRect();
-        if (!r.width) return;
-        var px = (e.clientX - r.left) / r.width - .5;
-        var py = (e.clientY - r.top) / r.height - .5;
-        card.style.transform =
-          'perspective(900px) rotateX(' + (-py * 3).toFixed(2) + 'deg) ' +
-          'rotateY(' + (px * 3).toFixed(2) + 'deg) translateY(-4px)';
-      });
-      card.addEventListener('pointerleave', function () {
-        card.classList.remove('is-tilt');
-        card.style.transform = '';
-      });
-    });
   }
 
-  /* ---------- 滚动：顶部进度条 ---------- */
+  /* ---------- 顶部进度条 ---------- */
   var scrolling = false;
 
   function onScroll() {

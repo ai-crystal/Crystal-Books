@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>__TITLE__</title>
+<meta name="description" content="__DESC__">
+<meta property="og:title" content="__TITLE__">
+<meta property="og:description" content="__DESC__">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://ai-crystal.github.io/Crystal-Books/assets/hero.jpg">
+<meta name="author" content="Dr. Dezeming">
+<meta name="theme-color" content="#f8f6f1">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23f8f6f1'/%3E%3Cpath d='M16 5 25 16 16 27 7 16Z' fill='none' stroke='%23a4742a' stroke-width='1.4'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body data-page="__MODE__" data-cat="__CAT__">
+<div id="top"></div>
+<header class="nav" id="nav">
+  <a class="brand" href="index.html" aria-label="Crystal Books 首页">
+    <span class="mark"><span>C</span></span>
+    <span class="brand-name">CRYSTAL BOOKS<small>技术书库</small></span>
+  </a>
+  <nav class="chips" id="chips" aria-label="分类导航"></nav>
+__SEARCH__
+</header>
+
+<main>
+__MAIN__
+</main>
+
+<footer class="footer">
+  <div class="wrap footer-inner">
+    <p class="footer-word">CRYSTAL <span>BOOKS</span></p>
+    <div class="footer-meta">
+      <p class="footer-sub">Dr. Dezeming 的技术书稿合集。文字与插图采用 CC BY-NC-SA 4.0 许可发布，转载请注明作者与出处。</p>
+      <div class="footer-links">
+        <a href="index.html">首页</a>
+        <a href="index.html#all-series">全部系列</a>
+        <a href="https://github.com/ai-crystal/Crystal-Books" target="_blank" rel="noopener">GitHub 仓库</a>
+        <a href="#top">回到顶部</a>
+        <span class="footer-copy">© 2026 Dr. Dezeming</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<button class="to-top" id="to-top" aria-label="回到顶部">
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M6 11l6-6 6 6"/></svg>
+</button>
+
+<script>
+window.PAGE = { mode: "__MODE__", cat: "__CAT__" };
+window.CATEGORIES = __CATS__;
+window.BOOK_DATA = __DATA__;
+</script>
+<script src="assets/site.js"></script>
+<script src="assets/fx.js" defer></script>
+</body>
+</html>
