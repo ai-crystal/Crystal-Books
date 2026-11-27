@@ -1,45 +1,7 @@
 {
  "AIAgent技术": {
-  "path": "AIAgent技术",
+  "path": "E:\\Study\\AIAgent技术",
   "books": [
-   {
-    "dir": "agent-engineering",
-    "bookjson": {
-     "slug": "agent-engineering",
-     "title": "Agent 工程化",
-     "subtitle": "从原型到生产：运行时、权限、评测与可靠性",
-     "author": "Dr. Dezeming",
-     "year": "2026",
-     "pdf": "agent-engineering.pdf",
-     "cover_tag": "AGENT ENGINEERING / VOL. 3",
-     "cover_note": "把能跑一次的 Agent，变成能长期运行、可审计、可回滚的系统",
-     "back_text": "原型关心“能不能答对”，生产关心“出错时会发生什么”。<br>本书从运行时、工具契约、权限、状态、观测、评测、可靠性和安全几个层面，拆开 Agent 工程化的细节。",
-     "keywords": "AI Agent, enterprise, engineering"
-    },
-    "pdf": "agent-engineering.pdf",
-    "pages": 49,
-    "chapters": 10,
-    "has_readme": true
-   },
-   {
-    "dir": "agent-enterprise-cases",
-    "bookjson": {
-     "slug": "agent-enterprise-cases",
-     "title": "Agent 企业实战",
-     "subtitle": "六个案例：从需求、数据、权限到上线",
-     "author": "Dr. Dezeming",
-     "year": "2026",
-     "pdf": "agent-enterprise-cases.pdf",
-     "cover_tag": "AGENT IN PRACTICE / VOL. 4",
-     "cover_note": "案例不是演示，而是一组需要交付、验收和运维的工程约束",
-     "back_text": "客服、合同、研发、数据、流程和知识门户，项目的难点通常不在模型，而在数据边界、审批、失败恢复和验收标准。<br>本书用六个案例展示企业 Agent 项目真正需要处理什么。",
-     "keywords": "AI Agent, enterprise, engineering"
-    },
-    "pdf": "agent-enterprise-cases.pdf",
-    "pages": 39,
-    "chapters": 9,
-    "has_readme": true
-   },
    {
     "dir": "ai-agent-foundations",
     "bookjson": {
@@ -47,15 +9,15 @@
      "title": "从语言模型到智能体",
      "subtitle": "AI Agent 的技术演进与工程实现",
      "author": "Dr. Dezeming",
-     "pdf": "ai-agent-foundations.pdf",
+     "pdf": "v1-ai-agent-foundations.pdf",
      "cover_tag": "AI AGENT / VOL. 1",
      "cover_note": "从下一个词预测，到能在真实世界里连续工作数小时的智能体<br>十六章，一条从背景动机走到工程实现的路",
      "back_text": "一个只会预测下一个词的模型，为什么不能直接拿来做事？<br>它缺的不是知识，而是反馈、状态和后果。<br><br>这本书从 2020 年那个只会接着往下写的模型讲起，一路讲到今天可以连续工作几个小时的智能体。思维链、ReAct、工具、记忆、上下文、Harness、多 Agent、训练、评测与安全，逐层补上工程系统需要的缺口。",
      "keywords": "AI Agent, LLM, ReAct, Harness, 上下文工程",
      "year": "2026"
     },
-    "pdf": "ai-agent-foundations.pdf",
-    "pages": 187,
+    "pdf": "v1-ai-agent-foundations.pdf",
+    "pages": 192,
     "chapters": 17,
     "has_readme": true
    },
@@ -66,81 +28,93 @@
      "title": "RAG 与上下文工程",
      "subtitle": "检索、重排序与可控的上下文",
      "author": "Dr. Dezeming",
-     "pdf": "rag-context-rerank.pdf",
+     "pdf": "v2-rag-context-rerank.pdf",
      "cover_tag": "RAG / CONTEXT / VOL. 2",
      "cover_note": "把外部知识接进模型，再把合适的证据放进有限的上下文<br>从切块与检索，到重排序、引用与评测",
      "back_text": "RAG 不是“把文档塞进向量库”这么简单。<br>一个可用的系统要决定切什么、怎样检索、如何重排、把哪些证据放进上下文，以及怎样证明答案真的有依据。<br><br>这本书沿着一条真实请求的路径，讲清检索增强生成、上下文管理和重排序的工程机制。",
      "keywords": "RAG, retrieval, reranking, context engineering, embeddings, evaluation",
      "year": "2026"
     },
-    "pdf": "rag-context-rerank.pdf",
-    "pages": 58,
-    "chapters": 10,
+    "pdf": "v2-rag-context-rerank.pdf",
+    "pages": 92,
+    "chapters": 11,
+    "has_readme": true
+   },
+   {
+    "dir": "agent-engineering",
+    "bookjson": {
+     "slug": "agent-engineering",
+     "title": "Agent 工程化",
+     "subtitle": "从原型到生产：运行时、权限、评测与可靠性",
+     "author": "Dr. Dezeming",
+     "year": "2026",
+     "pdf": "v3-agent-engineering.pdf",
+     "cover_tag": "AGENT ENGINEERING / VOL. 3",
+     "cover_note": "把能跑一次的 Agent，变成能长期运行、可审计、可回滚的系统",
+     "back_text": "原型关心“能不能答对”，生产关心“出错时会发生什么”。<br>本书从运行时、工具契约、权限、状态、观测、评测、可靠性和安全几个层面，拆开 Agent 工程化的细节。",
+     "keywords": "AI Agent, enterprise, engineering"
+    },
+    "pdf": "v3-agent-engineering.pdf",
+    "pages": 92,
+    "chapters": 11,
+    "has_readme": true
+   },
+   {
+    "dir": "agent-enterprise-cases",
+    "bookjson": {
+     "slug": "agent-enterprise-cases",
+     "title": "Agent 企业实战",
+     "subtitle": "八个案例：从需求、数据、权限到上线",
+     "author": "Dr. Dezeming",
+     "year": "2026",
+     "pdf": "v4-agent-enterprise-cases.pdf",
+     "cover_tag": "AGENT IN PRACTICE / VOL. 4",
+     "cover_note": "案例不是演示，而是一组需要交付、验收和运维的工程约束",
+     "back_text": "客服、合同、研发、数据、流程和知识门户，项目的难点通常不在模型，而在数据边界、审批、失败恢复和验收标准。<br>本书用八个案例展示企业 Agent 项目真正需要处理什么。",
+     "keywords": "AI Agent, enterprise, engineering"
+    },
+    "pdf": "v4-agent-enterprise-cases.pdf",
+    "pages": 85,
+    "chapters": 11,
     "has_readme": true
    }
-  ],
-  "single": false
+  ]
  },
  "AI量化与部署技术": {
-  "path": "AI量化与部署技术",
+  "path": "E:\\Study\\AI量化与部署技术",
   "books": [
-   {
-    "dir": "compute",
-    "bookjson": {
-     "title": "算力",
-     "subtitle": "GPU、CUDA 与算子性能",
-     "pdf": "ai-inference-02-compute.pdf",
-     "author": "Dr. Dezeming",
-     "year": "2026",
-     "toc_sections": true,
-     "subject": "GPU 架构、CUDA 编程、GEMM、卷积、Attention 与性能分析",
-     "keywords": "GPU, CUDA, GEMM, 卷积, FlashAttention, roofline, Nsight, 算子融合"
-    },
-    "pdf": "ai-inference-02-compute.pdf",
-    "pages": 83,
-    "chapters": 14,
-    "has_readme": true
-   },
-   {
-    "dir": "engine",
-    "bookjson": {
-     "title": "引擎",
-     "subtitle": "计算图、编译与推理服务",
-     "pdf": "ai-inference-04-engine.pdf",
-     "author": "Dr. Dezeming",
-     "year": "2026",
-     "toc_sections": true,
-     "subject": "计算图优化、推理编译、运行时、批处理与推理服务",
-     "keywords": "计算图, 算子融合, TensorRT, TVM, MLIR, torch.compile, PagedAttention, vLLM"
-    },
-    "pdf": "ai-inference-04-engine.pdf",
-    "pages": 74,
-    "chapters": 14,
-    "has_readme": true
-   },
    {
     "dir": "intro",
     "bookjson": {
      "title": "入门",
      "subtitle": "从模型文件到线上服务",
-     "pdf": "ai-inference-01-intro.pdf",
+     "pdf": "v1-intro.pdf",
      "author": "Dr. Dezeming",
      "year": "2026",
      "toc_sections": true,
      "subject": "AI 推理部署、量化、算子融合与推理引擎",
      "keywords": "推理部署, 量化, 算子融合, TensorRT, LLM, 性能优化"
     },
-    "pdf": "ai-inference-01-intro.pdf",
-    "pages": 116,
+    "pdf": "v1-intro.pdf",
+    "pages": 158,
     "chapters": 28,
     "has_readme": true
    },
    {
-    "dir": "practice",
-    "bookjson": null,
-    "pdf": null,
-    "pages": null,
-    "chapters": 0,
+    "dir": "compute",
+    "bookjson": {
+     "title": "算力",
+     "subtitle": "GPU、CUDA 与算子性能",
+     "pdf": "v2-compute.pdf",
+     "author": "Dr. Dezeming",
+     "year": "2026",
+     "toc_sections": true,
+     "subject": "GPU 架构、CUDA 编程、GEMM、卷积、Attention 与性能分析",
+     "keywords": "GPU, CUDA, GEMM, 卷积, FlashAttention, roofline, Nsight, 算子融合"
+    },
+    "pdf": "v2-compute.pdf",
+    "pages": 94,
+    "chapters": 14,
     "has_readme": true
    },
    {
@@ -148,23 +122,39 @@
     "bookjson": {
      "title": "精度",
      "subtitle": "量化、剪枝与低秩分解",
-     "pdf": "ai-inference-03-precision.pdf",
+     "pdf": "v3-precision.pdf",
      "author": "Dr. Dezeming",
      "year": "2026",
      "toc_sections": true,
      "subject": "数值格式、量化、剪枝、低秩分解与知识蒸馏",
      "keywords": "量化, PTQ, QAT, FP8, INT4, GPTQ, AWQ, SmoothQuant, 剪枝, 低秩分解, 蒸馏"
     },
-    "pdf": "ai-inference-03-precision.pdf",
-    "pages": 82,
+    "pdf": "v3-precision.pdf",
+    "pages": 96,
     "chapters": 15,
     "has_readme": true
+   },
+   {
+    "dir": "engine",
+    "bookjson": {
+     "title": "引擎",
+     "subtitle": "计算图、编译与推理服务",
+     "pdf": "v4-engine.pdf",
+     "author": "Dr. Dezeming",
+     "year": "2026",
+     "toc_sections": true,
+     "subject": "计算图优化、推理编译、运行时、批处理与推理服务",
+     "keywords": "计算图, 算子融合, TensorRT, TVM, MLIR, torch.compile, PagedAttention, vLLM"
+    },
+    "pdf": "v4-engine.pdf",
+    "pages": 88,
+    "chapters": 14,
+    "has_readme": true
    }
-  ],
-  "single": false
+  ]
  },
  "HDR技术": {
-  "path": "HDR技术",
+  "path": "E:\\Study\\HDR技术",
   "books": [
    {
     "dir": "beginner",
@@ -177,9 +167,9 @@
      "author": "Dezeming",
      "year": "2026",
      "cover_bg": "images/logo/cover_bg.jpg",
-     "pdf": "HDR-Basics.pdf"
+     "pdf": "v1-beginner.pdf"
     },
-    "pdf": "HDR-Basics.pdf",
+    "pdf": "v1-beginner.pdf",
     "pages": 214,
     "chapters": 20,
     "has_readme": true
@@ -195,11 +185,11 @@
      "author": "Dr. Dezeming",
      "year": "2026",
      "cover_bg": "images/cover_bg.jpg",
-     "pdf": "HDR-ColorScience.pdf"
+     "pdf": "v2-color-science.pdf"
     },
-    "pdf": "HDR-ColorScience.pdf",
-    "pages": 52,
-    "chapters": 6,
+    "pdf": "v2-color-science.pdf",
+    "pages": 214,
+    "chapters": 12,
     "has_readme": true
    },
    {
@@ -213,30 +203,30 @@
      "author": "Dr. Dezeming",
      "year": "2026",
      "cover_bg": "images/cover_bg.jpg",
-     "pdf": "HDR-Technology.pdf"
+     "pdf": "v3-hdr-tech.pdf"
     },
-    "pdf": "HDR-Technology.pdf",
-    "pages": 50,
-    "chapters": 6,
+    "pdf": "v3-hdr-tech.pdf",
+    "pages": 224,
+    "chapters": 12,
     "has_readme": true
    }
-  ],
-  "single": false
+  ]
  },
  "Mamba技术": {
-  "path": "Mamba技术",
+  "path": "E:\\Study\\Mamba技术",
   "books": [
    {
     "dir": "intro",
     "bookjson": {
      "title": "状态空间模型",
+     "volume": 1,
      "edition": "入门版",
      "subtitle": "故事与直觉",
      "series": "STATE SPACE MODELS",
      "author": "Dr. Dezeming",
      "year": "2026",
      "version": "2026 年 11 月",
-     "pdf": "state-space-models-intro.pdf",
+     "pdf": "v1-intro.pdf",
      "toc_sections": false,
      "cover": "cover.jpg",
      "backcover": "backcover.jpg",
@@ -245,8 +235,8 @@
       "全书不推公式，只讲每一步为什么被逼出来、代价落在哪里。读完能判断这些模型各自适合什么场景，也知道每个结论该回哪篇论文去查。"
      ]
     },
-    "pdf": "state-space-models-intro.pdf",
-    "pages": 41,
+    "pdf": "v1-intro.pdf",
+    "pages": 91,
     "chapters": 14,
     "has_readme": true
    },
@@ -254,13 +244,14 @@
     "dir": "pro",
     "bookjson": {
      "title": "状态空间模型",
+     "volume": 2,
      "edition": "专业版",
      "subtitle": "理论、算法与实现",
      "series": "STATE SPACE MODELS",
      "author": "Dr. Dezeming",
      "year": "2026",
      "version": "2026 年 11 月",
-     "pdf": "state-space-models-pro.pdf",
+     "pdf": "v2-pro.pdf",
      "toc_sections": false,
      "cover": "cover.jpg",
      "backcover": "backcover.jpg",
@@ -269,54 +260,16 @@
       "书里逐个拆解七个模型的动机、推导与取舍。每一次进步都不是发明了新东西，而是把旧问题换了一个问法，再借来另一个领域已有的工具。"
      ]
     },
-    "pdf": "state-space-models-pro.pdf",
-    "pages": 363,
+    "pdf": "v2-pro.pdf",
+    "pages": 539,
     "chapters": 35,
     "has_readme": true
    }
-  ],
-  "single": false
+  ]
  },
  "专业级渲染技术": {
-  "path": "专业级渲染技术",
+  "path": "E:\\Study\\专业级渲染技术",
   "books": [
-   {
-    "dir": "aniso-metal",
-    "bookjson": {
-     "name": "aniso-metal",
-     "title": "各向异性金属",
-     "series_title": "专业级渲染技术",
-     "volume": "专题五",
-     "volume_no": "05",
-     "subtitle": "从复折射率到拉丝高光",
-     "pdf": "rendering-05-aniso-metal.pdf",
-     "author": "Dr. Dezeming",
-     "year": "2026",
-     "toc_sections": true,
-     "accent": "#4a6fa5",
-     "oneline": "复折射率、各向异性 GGX、拉丝与氧化层",
-     "cover": {
-      "image": "logo9.png",
-      "kicker": "专业级渲染技术",
-      "title_lines": [
-       "各向异性金属"
-      ],
-      "footer": "复折射率 · 导体 Fresnel · 各向异性 · 氧化层 · 测量",
-      "back_quote": "金属的颜色，来自它不肯让光进去。",
-      "back_paras": [
-       "金属的反射率随波长变化，这不是调色能还原的：铜偏红、金偏黄、铝几乎中性，原因是自由电子对不同频率的响应不同。更麻烦的是拉丝表面——高光被拉成一条线，而不是一个圆斑。",
-       "这本书从复折射率与导体 Fresnel 出发，把微表面理论推广到各向异性，再讲拉丝、锤纹、氧化层与薄膜，最后落到实时管线里能用的近似。"
-      ],
-      "back_image": "logo9.png"
-     },
-     "blurb": "金属的反射率随波长变化，这不是调色能还原的：铜偏红、金偏黄、铝几乎中性，原因是自由电子对不同频率的响应不同。更麻烦的是拉丝表面——高光被拉成一条线，而不是一个圆斑。\n这本书从复折射率与导体 Fresnel 出发，把微表面理论推广到各向异性，再讲拉丝、锤纹、氧化层与薄膜，最后落到实时管线里能用的近似。",
-     "pages": 59
-    },
-    "pdf": "rendering-05-aniso-metal.pdf",
-    "pages": 59,
-    "chapters": 9,
-    "has_readme": true
-   },
    {
     "dir": "beginner",
     "bookjson": {
@@ -326,7 +279,7 @@
      "volume": "入门篇",
      "volume_no": "00",
      "subtitle": "从光线追踪器到可用的材质系统",
-     "pdf": "rendering-00-beginner.pdf",
+     "pdf": "v1-beginner.pdf",
      "author": "Dr. Dezeming",
      "year": "2026",
      "toc_sections": true,
@@ -347,7 +300,7 @@
      "blurb": "一个材质为什么长成那个公式，公式里每一项在物理上对应什么，换一种材料时哪一条假设先碎——这是后面八册反复要问的三个问题。\n入门篇把公共语言搭起来：Fresnel、微表面三段式、丢失的能量、分层界面、采样与验证。读完能自己写出一个能量守恒、能被采样的 BSDF，也知道怎么证明它是对的。",
      "pages": 77
     },
-    "pdf": "rendering-00-beginner.pdf",
+    "pdf": "v1-beginner.pdf",
     "pages": 77,
     "chapters": 14,
     "has_readme": true
@@ -361,7 +314,7 @@
      "volume": "专题一",
      "volume_no": "01",
      "subtitle": "从纤维、纱线到织物",
-     "pdf": "rendering-01-cloth.pdf",
+     "pdf": "v2-cloth.pdf",
      "author": "Dr. Dezeming",
      "year": "2026",
      "toc_sections": true,
@@ -384,7 +337,7 @@
      "blurb": "织物不是一种材质，而是纤维、纱线、编织三级结构共同产生的结果。单看一根纤维是圆柱散射，单看一根纱线是带绒毛的粗糙表面，放大到织物又出现编织方向与透光。\n这本书沿着这三级结构往上走：从圆柱散射讲到 Karis 的纱线级模型，再讲 sheen、绒面、薄织物透射和染色，最后给出一个能放进路径追踪器、能量对得上的实现。",
      "pages": 79
     },
-    "pdf": "rendering-01-cloth.pdf",
+    "pdf": "v2-cloth.pdf",
     "pages": 79,
     "chapters": 12,
     "has_readme": true
@@ -398,7 +351,7 @@
      "volume": "专题二",
      "volume_no": "02",
      "subtitle": "从一根纤维到一头头发",
-     "pdf": "rendering-02-hair.pdf",
+     "pdf": "v3-hair.pdf",
      "author": "Dr. Dezeming",
      "year": "2026",
      "toc_sections": true,
@@ -421,158 +374,9 @@
      "blurb": "毛发的高光为什么有两道？为什么逆光时整头头发会亮起来？答案在纤维的同心结构里：角质层、皮层、髓质，各自折射率不同，光线在里面走 R、TT、TRT 三条路。\n这本书从 Kajiya–Kay 讲到 Marschner，再讲生产里真正用的双散射与远距离 LOD，最后把毛发当成一种极细的参与介质重新看一遍。",
      "pages": 64
     },
-    "pdf": "rendering-02-hair.pdf",
+    "pdf": "v3-hair.pdf",
     "pages": 64,
     "chapters": 10,
-    "has_readme": true
-   },
-   {
-    "dir": "physics",
-    "bookjson": {
-     "name": "physics",
-     "title": "从初高中物理到麦克斯韦方程组",
-     "series_title": "专业级渲染技术",
-     "volume": "基础篇",
-     "volume_no": "10",
-     "subtitle": "一步一步推出电磁场",
-     "pdf": "rendering-10-physics.pdf",
-     "author": "Dr. Dezeming",
-     "year": "2026",
-     "toc_sections": true,
-     "accent": "#b08a2f",
-     "oneline": "从速度、电路、磁场到四个方程的完整推导",
-     "cover": {
-      "image": "logo10.png",
-      "kicker": "专业级渲染技术",
-      "title_lines": [
-       "从初高中物理",
-       "到麦克斯韦方程组"
-      ],
-      "footer": "力学 · 电路 · 磁场 · 电磁感应 · 矢量分析 · 电磁波",
-      "back_quote": "四个方程，四百年。",
-      "back_paras": [
-       "这本书假设你只记得中学物理：速度、力、欧姆定律、左手定则。从这些出发，一步一步推到麦克斯韦方程组，中间不跳步，每引入一个新量都先说清它要解决什么问题。",
-       "路线是：运动与力、功与能、电荷与库仑定律、电场与电势、电流与电路、磁场与安培环路、电磁感应与电感，然后补上矢量分析，最后用位移电流把四个方程补齐，并从中解出电磁波。"
-      ],
-      "back_image": "logo10.png"
-     },
-     "blurb": "这本书假设你只记得中学物理：速度、力、欧姆定律、左手定则。从这些出发，一步一步推到麦克斯韦方程组，中间不跳步，每引入一个新量都先说清它要解决什么问题。\n路线是：运动与力、功与能、电荷与库仑定律、电场与电势、电流与电路、磁场与安培环路、电磁感应与电感，然后补上矢量分析（梯度、散度、旋度与两个积分定理），最后用位移电流把四个方程补齐，并从中解出电磁波。"
-    },
-    "pdf": null,
-    "pages": null,
-    "chapters": 7,
-    "has_readme": false
-   },
-   {
-    "dir": "reservoir",
-    "bookjson": {
-     "name": "reservoir",
-     "title": "基于储蓄池的渲染",
-     "series_title": "专业级渲染技术",
-     "volume": "专题八",
-     "volume_no": "08",
-     "subtitle": "从 RIS 到 ReSTIR",
-     "pdf": "rendering-08-reservoir.pdf",
-     "author": "Dr. Dezeming",
-     "year": "2026",
-     "toc_sections": true,
-     "accent": "#c07a2a",
-     "oneline": "MIS、带权蓄水池、RIS、ReSTIR 与 GRIS",
-     "cover": {
-      "image": "logo12.png",
-      "kicker": "专业级渲染技术",
-      "title_lines": [
-       "基于储蓄池",
-       "的渲染"
-      ],
-      "footer": "MIS · WRS · RIS · ReSTIR · GRIS · 体积重采样",
-      "back_quote": "与其采一次，不如记住上一次。",
-      "back_paras": [
-       "光源采样在有很多灯的场景里会失效：随机挑一盏灯，大多数时候挑中的那盏对当前着色点毫无贡献。蓄水池采样换了个思路——多试几个候选，只留下最好的那个，并记住它被选中的概率。",
-       "这本书从蓄水池采样讲到 RIS，再到 ReSTIR 的时空复用、路径复用与 GRIS 理论，重点是那些让结果仍然无偏的细节。"
-      ],
-      "back_image": "logo12.png"
-     },
-     "blurb": "光源采样在多灯场景里会失效：随机挑一盏，大多数时候挑中的那盏对着色点毫无贡献。蓄水池采样换了个思路——多试几个候选，只留下最好的那个，并记住它被选中的概率。\n这本书从 MIS 与带权蓄水池讲起，经 Talbot 的 RIS 走到 ReSTIR 的时空复用、路径复用与 GRIS 理论，每一步都给出无偏性成立的条件，也给出破坏它之后偏差会有多大。",
-     "pages": 94
-    },
-    "pdf": "rendering-08-reservoir.pdf",
-    "pages": 94,
-    "chapters": 15,
-    "has_readme": true
-   },
-   {
-    "dir": "sdf",
-    "bookjson": {
-     "name": "sdf",
-     "title": "符号距离场与渲染",
-     "series_title": "专业级渲染技术",
-     "volume": "专题九",
-     "volume_no": "09",
-     "subtitle": "从距离函数到光线步进与全局光照",
-     "pdf": "rendering-09-sdf.pdf",
-     "author": "Dr. Dezeming",
-     "year": "2026",
-     "toc_sections": true,
-     "accent": "#2f7f6f",
-     "oneline": "距离场的代数、组合、光线步进、锥追踪与网格转换",
-     "cover": {
-      "image": "logo4.png",
-      "kicker": "专业级渲染技术",
-      "title_lines": [
-       "符号距离场",
-       "与渲染"
-      ],
-      "footer": "SDF · 光线步进 · 锥追踪 · 八叉树 · 神经SDF",
-      "back_quote": "把形状写成到边界的距离。",
-      "back_paras": [
-       "距离场把几何换成一个标量函数：每个点存到最近表面的距离，符号表示在里还是在外。这个替换让求交变成求零点、让布尔运算变成取最小值、让圆角与变形变成一次加法。",
-       "这本书从距离函数的定义讲起，经解析 SDF、布尔与平滑组合、光线步进与法线、软阴影与环境光遮蔽，到体积渲染与锥追踪全局光照，最后讲网格怎么转成 SDF、怎么压缩与怎么接进路径追踪器。"
-      ],
-      "back_image": "logo4.png"
-     },
-     "blurb": "距离场把几何换成一个标量函数：每个点存到最近表面的距离，符号表示在里还是在外。这个替换让求交变成求零点、让布尔运算变成取最小值、让圆角与变形变成一次加法。\n这本书从距离函数的定义讲起，经解析 SDF、布尔与平滑组合、光线步进与法线、软阴影与环境光遮蔽，到体积渲染与锥追踪全局光照，最后讲网格怎么转成 SDF、怎么压缩与怎么接进路径追踪器。"
-    },
-    "pdf": null,
-    "pages": null,
-    "chapters": 4,
-    "has_readme": false
-   },
-   {
-    "dir": "spectral",
-    "bookjson": {
-     "name": "spectral",
-     "title": "光谱渲染",
-     "series_title": "专业级渲染技术",
-     "volume": "专题四",
-     "volume_no": "04",
-     "subtitle": "从光子到图像",
-     "pdf": "rendering-04-spectral.pdf",
-     "author": "Dr. Dezeming",
-     "year": "2026",
-     "toc_sections": true,
-     "accent": "#2f7f8f",
-     "oneline": "光子与相干、上采样、神经基底、色散与荧光",
-     "cover": {
-      "image": "logo11.png",
-      "kicker": "专业级渲染技术",
-      "title_lines": [
-       "光谱渲染"
-      ],
-      "footer": "光子 · 相干 · 上采样 · 神经光谱 · 色散",
-      "back_quote": "颜色不是光，只是光的一种读数。",
-      "back_paras": [
-       "有一些场景，任何 RGB 渲染器都会答错：两条窄谱线混出的洋红，穿过棱镜后的一条彩带，荧光材料在紫外下的发光。它们错在同一个地方——把连续的光谱压成了三个数。",
-       "这本书从普朗克的量子假设讲起，把光子、相干性、辐亮度一步一步接上，再讲清楚光谱表示、波长采样、hero wavelength、光谱上采样、色散、介质与荧光，最后给出一个能跑的最小实现和一个完整的色散玻璃场景。"
-      ],
-      "back_image": "logo11.png"
-     },
-     "blurb": "从普朗克把能量换成一份一份开始，这本书把光从量子描述一路放回渲染方程：光子与相干性怎么变成辐亮度，辐亮度又怎么被压成三个通道。中间每一层近似都标出成立条件，也标出它碎掉的样子。\n后面讲光谱表示、波长采样、hero wavelength、光谱上采样、色散、介质与荧光，再用两章讲神经光谱：怎样用一个张量积把 RGB 变成一条谱线，训练时要造什么数据、会学到什么，以及接进渲染器要付多少代价。",
-     "pages": 111
-    },
-    "pdf": "rendering-04-spectral.pdf",
-    "pages": 126,
-    "chapters": 20,
     "has_readme": true
    },
    {
@@ -584,7 +388,7 @@
      "volume": "专题三",
      "volume_no": "03",
      "subtitle": "从辐射传输到可运行的采样器",
-     "pdf": "rendering-03-sss.pdf",
+     "pdf": "v4-sss.pdf",
      "author": "Dr. Dezeming",
      "year": "2026",
      "toc_sections": true,
@@ -608,9 +412,83 @@
      "blurb": "从一束照在蜡上的光开始，这本书把次表面散射拆成可以逐步推导的问题：光在介质里怎样被吸收与散射，辐射传输方程为什么解不动，扩散近似在什么条件下成立，偶极子公式又是怎样从一次求导里长出来的。\n读完可以自己从方程推到代码，也能判断一个模型在什么物体上不再适用。",
      "pages": 111
     },
-    "pdf": "rendering-03-sss.pdf",
+    "pdf": "v4-sss.pdf",
     "pages": 112,
     "chapters": 22,
+    "has_readme": true
+   },
+   {
+    "dir": "spectral",
+    "bookjson": {
+     "name": "spectral",
+     "title": "光谱渲染",
+     "series_title": "专业级渲染技术",
+     "volume": "专题四",
+     "volume_no": "04",
+     "subtitle": "从光子到图像",
+     "pdf": "v5-spectral.pdf",
+     "author": "Dr. Dezeming",
+     "year": "2026",
+     "toc_sections": true,
+     "accent": "#2f7f8f",
+     "oneline": "光子与相干、上采样、神经基底、色散与荧光",
+     "cover": {
+      "image": "logo11.png",
+      "kicker": "专业级渲染技术",
+      "title_lines": [
+       "光谱渲染"
+      ],
+      "footer": "光子 · 相干 · 上采样 · 神经光谱 · 色散",
+      "back_quote": "颜色不是光，只是光的一种读数。",
+      "back_paras": [
+       "有一些场景，任何 RGB 渲染器都会答错：两条窄谱线混出的洋红，穿过棱镜后的一条彩带，荧光材料在紫外下的发光。它们错在同一个地方——把连续的光谱压成了三个数。",
+       "这本书从普朗克的量子假设讲起，把光子、相干性、辐亮度一步一步接上，再讲清楚光谱表示、波长采样、hero wavelength、光谱上采样、色散、介质与荧光，最后给出一个能跑的最小实现和一个完整的色散玻璃场景。"
+      ],
+      "back_image": "logo11.png"
+     },
+     "blurb": "从普朗克把能量换成一份一份开始，这本书把光从量子描述一路放回渲染方程：光子与相干性怎么变成辐亮度，辐亮度又怎么被压成三个通道。中间每一层近似都标出成立条件，也标出它碎掉的样子。\n后面讲光谱表示、波长采样、hero wavelength、光谱上采样、色散、介质与荧光，再用两章讲神经光谱：怎样用一个张量积把 RGB 变成一条谱线，训练时要造什么数据、会学到什么，以及接进渲染器要付多少代价。",
+     "pages": 111
+    },
+    "pdf": "v5-spectral.pdf",
+    "pages": 126,
+    "chapters": 20,
+    "has_readme": true
+   },
+   {
+    "dir": "aniso-metal",
+    "bookjson": {
+     "name": "aniso-metal",
+     "title": "各向异性金属",
+     "series_title": "专业级渲染技术",
+     "volume": "专题五",
+     "volume_no": "05",
+     "subtitle": "从复折射率到拉丝高光",
+     "pdf": "v6-aniso-metal.pdf",
+     "author": "Dr. Dezeming",
+     "year": "2026",
+     "toc_sections": true,
+     "accent": "#4a6fa5",
+     "oneline": "复折射率、各向异性 GGX、拉丝与氧化层",
+     "cover": {
+      "image": "logo9.png",
+      "kicker": "专业级渲染技术",
+      "title_lines": [
+       "各向异性金属"
+      ],
+      "footer": "复折射率 · 导体 Fresnel · 各向异性 · 氧化层 · 测量",
+      "back_quote": "金属的颜色，来自它不肯让光进去。",
+      "back_paras": [
+       "金属的反射率随波长变化，这不是调色能还原的：铜偏红、金偏黄、铝几乎中性，原因是自由电子对不同频率的响应不同。更麻烦的是拉丝表面——高光被拉成一条线，而不是一个圆斑。",
+       "这本书从复折射率与导体 Fresnel 出发，把微表面理论推广到各向异性，再讲拉丝、锤纹、氧化层与薄膜，最后落到实时管线里能用的近似。"
+      ],
+      "back_image": "logo9.png"
+     },
+     "blurb": "金属的反射率随波长变化，这不是调色能还原的：铜偏红、金偏黄、铝几乎中性，原因是自由电子对不同频率的响应不同。更麻烦的是拉丝表面——高光被拉成一条线，而不是一个圆斑。\n这本书从复折射率与导体 Fresnel 出发，把微表面理论推广到各向异性，再讲拉丝、锤纹、氧化层与薄膜，最后落到实时管线里能用的近似。",
+     "pages": 59
+    },
+    "pdf": "v6-aniso-metal.pdf",
+    "pages": 59,
+    "chapters": 9,
     "has_readme": true
    },
    {
@@ -622,7 +500,7 @@
      "volume": "专题六",
      "volume_no": "06",
      "subtitle": "从稀疏体素到锥追踪",
-     "pdf": "rendering-06-voxel.pdf",
+     "pdf": "v7-voxel.pdf",
      "author": "Dr. Dezeming",
      "year": "2026",
      "toc_sections": true,
@@ -645,7 +523,7 @@
      "blurb": "体素是一种取舍：把连续的几何换成离散的格子，换取查询速度和全局光照的可行性。代价是表面变糙、法线丢失、细节被平均掉。\n这本书讲体素的表示与存储、体素化怎么做才不漏面、锥追踪怎么估全局光照、体素表面怎么重建法线，以及大规模场景下的流式与压缩。",
      "pages": 58
     },
-    "pdf": "rendering-06-voxel.pdf",
+    "pdf": "v7-voxel.pdf",
     "pages": 58,
     "chapters": 9,
     "has_readme": true
@@ -659,7 +537,7 @@
      "volume": "专题七",
      "volume_no": "07",
      "subtitle": "从衍射到结构色",
-     "pdf": "rendering-07-wave-optics.pdf",
+     "pdf": "v8-wave-optics.pdf",
      "author": "Dr. Dezeming",
      "year": "2026",
      "toc_sections": true,
@@ -682,69 +560,128 @@
      "blurb": "肥皂泡的彩色、孔雀羽毛的蓝、CD 背面的彩虹，都不是颜料造成的。它们的颜色来自干涉与衍射——光的相位在起作用，而几何光学里没有相位这个量。\n这本书从标量衍射讲到多层膜传输矩阵，从光栅讲到结构色，再把偏振与 Mueller 矩阵接进 BSDF，最后讨论波动光学怎么和路径追踪结合。",
      "pages": 71
     },
-    "pdf": "rendering-07-wave-optics.pdf",
+    "pdf": "v8-wave-optics.pdf",
     "pages": 71,
     "chapters": 10,
     "has_readme": true
+   },
+   {
+    "dir": "reservoir",
+    "bookjson": {
+     "name": "reservoir",
+     "title": "基于储蓄池的渲染",
+     "series_title": "专业级渲染技术",
+     "volume": "专题八",
+     "volume_no": "08",
+     "subtitle": "从 RIS 到 ReSTIR",
+     "pdf": "v9-reservoir.pdf",
+     "author": "Dr. Dezeming",
+     "year": "2026",
+     "toc_sections": true,
+     "accent": "#c07a2a",
+     "oneline": "MIS、带权蓄水池、RIS、ReSTIR 与 GRIS",
+     "cover": {
+      "image": "logo12.png",
+      "kicker": "专业级渲染技术",
+      "title_lines": [
+       "基于储蓄池",
+       "的渲染"
+      ],
+      "footer": "MIS · WRS · RIS · ReSTIR · GRIS · 体积重采样",
+      "back_quote": "与其采一次，不如记住上一次。",
+      "back_paras": [
+       "光源采样在有很多灯的场景里会失效：随机挑一盏灯，大多数时候挑中的那盏对当前着色点毫无贡献。蓄水池采样换了个思路——多试几个候选，只留下最好的那个，并记住它被选中的概率。",
+       "这本书从蓄水池采样讲到 RIS，再到 ReSTIR 的时空复用、路径复用与 GRIS 理论，重点是那些让结果仍然无偏的细节。"
+      ],
+      "back_image": "logo12.png"
+     },
+     "blurb": "光源采样在多灯场景里会失效：随机挑一盏，大多数时候挑中的那盏对着色点毫无贡献。蓄水池采样换了个思路——多试几个候选，只留下最好的那个，并记住它被选中的概率。\n这本书从 MIS 与带权蓄水池讲起，经 Talbot 的 RIS 走到 ReSTIR 的时空复用、路径复用与 GRIS 理论，每一步都给出无偏性成立的条件，也给出破坏它之后偏差会有多大。",
+     "pages": 94
+    },
+    "pdf": "v9-reservoir.pdf",
+    "pages": 94,
+    "chapters": 15,
+    "has_readme": true
+   },
+   {
+    "dir": "sdf",
+    "bookjson": {
+     "name": "sdf",
+     "title": "符号距离场与渲染",
+     "series_title": "专业级渲染技术",
+     "volume": "专题九",
+     "volume_no": "09",
+     "subtitle": "从距离函数到光线步进与全局光照",
+     "pdf": "v10-sdf.pdf",
+     "author": "Dr. Dezeming",
+     "year": "2026",
+     "toc_sections": true,
+     "accent": "#2f7f6f",
+     "oneline": "距离场的代数、组合、光线步进、锥追踪与网格转换",
+     "cover": {
+      "image": "logo4.png",
+      "kicker": "专业级渲染技术",
+      "title_lines": [
+       "符号距离场",
+       "与渲染"
+      ],
+      "footer": "SDF · 光线步进 · 锥追踪 · 八叉树 · 神经SDF",
+      "back_quote": "把形状写成到边界的距离。",
+      "back_paras": [
+       "距离场把几何换成一个标量函数：每个点存到最近表面的距离，符号表示在里还是在外。这个替换让求交变成求零点、让布尔运算变成取最小值、让圆角与变形变成一次加法。",
+       "这本书从距离函数的定义讲起，经解析 SDF、布尔与平滑组合、光线步进与法线、软阴影与环境光遮蔽，到体积渲染与锥追踪全局光照，最后讲网格怎么转成 SDF、怎么压缩与怎么接进路径追踪器。"
+      ],
+      "back_image": "logo4.png"
+     },
+     "blurb": "距离场把几何换成一个标量函数：每个点存到最近表面的距离，符号表示在里还是在外。这个替换让求交变成求零点、让布尔运算变成取最小值、让圆角与变形变成一次加法。\n这本书从距离函数的定义讲起，经解析 SDF、布尔与平滑组合、光线步进与法线、软阴影与环境光遮蔽，到体积渲染与锥追踪全局光照，最后讲网格怎么转成 SDF、怎么压缩与怎么接进路径追踪器。"
+    },
+    "pdf": "v10-sdf.pdf",
+    "pages": 95,
+    "chapters": 18,
+    "has_readme": true
+   },
+   {
+    "dir": "physics",
+    "bookjson": {
+     "name": "physics",
+     "title": "从初高中物理到麦克斯韦方程组",
+     "series_title": "专业级渲染技术",
+     "volume": "基础篇",
+     "volume_no": "10",
+     "subtitle": "一步一步推出电磁场",
+     "pdf": "v11-physics.pdf",
+     "author": "Dr. Dezeming",
+     "year": "2026",
+     "toc_sections": true,
+     "accent": "#b08a2f",
+     "oneline": "从速度、电路、磁场到四个方程的完整推导",
+     "cover": {
+      "image": "logo10.png",
+      "kicker": "专业级渲染技术",
+      "title_lines": [
+       "从初高中物理",
+       "到麦克斯韦方程组"
+      ],
+      "footer": "力学 · 电路 · 磁场 · 电磁感应 · 矢量分析 · 电磁波",
+      "back_quote": "四个方程，四百年。",
+      "back_paras": [
+       "这本书假设你只记得中学物理：速度、力、欧姆定律、左手定则。从这些出发，一步一步推到麦克斯韦方程组，中间不跳步，每引入一个新量都先说清它要解决什么问题。",
+       "路线是：运动与力、功与能、电荷与库仑定律、电场与电势、电流与电路、磁场与安培环路、电磁感应与电感，然后补上矢量分析，最后用位移电流把四个方程补齐，并从中解出电磁波。"
+      ],
+      "back_image": "logo10.png"
+     },
+     "blurb": "这本书假设你只记得中学物理：速度、力、欧姆定律、左手定则。从这些出发，一步一步推到麦克斯韦方程组，中间不跳步，每引入一个新量都先说清它要解决什么问题。\n路线是：运动与力、功与能、电荷与库仑定律、电场与电势、电流与电路、磁场与安培环路、电磁感应与电感，然后补上矢量分析（梯度、散度、旋度与两个积分定理），最后用位移电流把四个方程补齐，并从中解出电磁波。"
+    },
+    "pdf": "v11-physics.pdf",
+    "pages": 230,
+    "chapters": 28,
+    "has_readme": true
    }
-  ],
-  "single": false
+  ]
  },
  "世界模型技术\\world-models": {
-  "path": "世界模型技术\\world-models",
+  "path": "E:\\Study\\世界模型技术\\world-models",
   "books": [
-   {
-    "dir": "foundations",
-    "bookjson": {
-     "series": "世界模型技术",
-     "series_slug": "world-models",
-     "order": 2,
-     "title": "世界模型技术·基础册",
-     "cover_title": "世界模型技术",
-     "volume": "02",
-     "volume_name": "基础册",
-     "subtitle": "概率、表示与生成",
-     "author": "Dr. Dezeming",
-     "edition": "2026 年 · 第一版",
-     "pdf": "wm-foundations.pdf",
-     "accent": "#6D28D9",
-     "accent2": "#B45309",
-     "art": "logo3.png",
-     "art_pos": "46% 50%",
-     "art_back": "logo6.png",
-     "tag_line": "所有公式都从定义推起。",
-     "back_title": "预测的本质是概率，<br>生成的本质是搬动概率质量",
-     "back_lead": "世界模型的每一块零件，都能在概率论、序列建模与生成模型里找到出处。这一册把 ELBO、注意力、扩散、对比学习、马尔可夫决策过程这些工具从头推一遍，推到能读懂后面几册的公式为止。",
-     "back_items": [
-      [
-       "第 2 章",
-       "从最小二乘到最大似然"
-      ],
-      [
-       "第 3 章",
-       "ELBO 与重参数化"
-      ],
-      [
-       "第 6 章",
-       "扩散与流匹配"
-      ],
-      [
-       "第 8 章",
-       "确定性、随机与离散潜变量"
-      ],
-      [
-       "第 9 章",
-       "MPC、CEM 与 MCTS"
-      ]
-     ],
-     "back_quote": "一个模型能预测什么，取决于它的状态里装了什么。",
-     "cover_accent": "#C0ACF5"
-    },
-    "pdf": "wm-foundations.pdf",
-    "pages": 88,
-    "chapters": 10,
-    "has_readme": false
-   },
    {
     "dir": "intro",
     "bookjson": {
@@ -758,7 +695,7 @@
      "subtitle": "机器如何想象未来",
      "author": "Dr. Dezeming",
      "edition": "2026 年 · 第一版",
-     "pdf": "wm-intro.pdf",
+     "pdf": "v1-intro.pdf",
      "accent": "#1D4E6F",
      "accent2": "#B45309",
      "art": "logo5.png",
@@ -792,62 +729,62 @@
      "back_quote": "世界模型不是把世界存下来，而是把世界的下一次变化猜准。",
      "cover_accent": "#8FBEDC"
     },
-    "pdf": "wm-intro.pdf",
-    "pages": 73,
+    "pdf": "v1-intro.pdf",
+    "pages": 139,
     "chapters": 10,
-    "has_readme": false
+    "has_readme": true
    },
    {
-    "dir": "jepa",
+    "dir": "foundations",
     "bookjson": {
      "series": "世界模型技术",
      "series_slug": "world-models",
-     "order": 5,
-     "title": "世界模型技术·表征册",
+     "order": 2,
+     "title": "世界模型技术·基础册",
      "cover_title": "世界模型技术",
-     "volume": "05",
-     "volume_name": "表征册",
-     "subtitle": "JEPA 与自监督世界模型",
+     "volume": "02",
+     "volume_name": "基础册",
+     "subtitle": "概率、表示与生成",
      "author": "Dr. Dezeming",
      "edition": "2026 年 · 第一版",
-     "pdf": "wm-jepa.pdf",
-     "accent": "#3730A3",
+     "pdf": "v2-foundations.pdf",
+     "accent": "#6D28D9",
      "accent2": "#B45309",
-     "art": "logo6.png",
-     "art_pos": "52% 48%",
-     "art_back": "logo3.png",
-     "tag_line": "不重建，只预测表征。",
-     "back_title": "如果预测的目标不是像素，<br>而是它在你脑中的那层表征",
-     "back_lead": "JEPA 把预测搬到表征空间：编码器看一段视频，预测器猜另一段视频的嵌入。它绕开了像素级重建的浪费，但必须回答一个新问题，怎么防止两个编码器一起塌缩到一个常数。这一册讲清这条路线的主张、实现与争议。",
+     "art": "logo3.png",
+     "art_pos": "46% 50%",
+     "art_back": "logo6.png",
+     "tag_line": "所有公式都从定义推起。",
+     "back_title": "预测的本质是概率，<br>生成的本质是搬动概率质量",
+     "back_lead": "世界模型的每一块零件，都能在概率论、序列建模与生成模型里找到出处。这一册把 ELBO、注意力、扩散、对比学习、马尔可夫决策过程这些工具从头推一遍，推到能读懂后面几册的公式为止。",
      "back_items": [
       [
-       "第 1 章",
-       "LeCun 的三笔账"
+       "第 2 章",
+       "从最小二乘到最大似然"
       ],
       [
        "第 3 章",
-       "塌缩的四种成因"
+       "ELBO 与重参数化"
       ],
       [
-       "第 4 章",
-       "I-JEPA 的四块目标"
+       "第 6 章",
+       "扩散与流匹配"
       ],
       [
-       "第 5 章",
-       "V-JEPA 2 与动作条件"
+       "第 8 章",
+       "确定性、随机与离散潜变量"
       ],
       [
        "第 9 章",
-       "柏拉图式的同一张地图"
+       "MPC、CEM 与 MCTS"
       ]
      ],
-     "back_quote": "预测什么，决定了一个模型最终学到什么。",
-     "cover_accent": "#A7AEF7"
+     "back_quote": "一个模型能预测什么，取决于它的状态里装了什么。",
+     "cover_accent": "#C0ACF5"
     },
-    "pdf": "wm-jepa.pdf",
-    "pages": 72,
-    "chapters": 9,
-    "has_readme": false
+    "pdf": "v2-foundations.pdf",
+    "pages": 146,
+    "chapters": 10,
+    "has_readme": true
    },
    {
     "dir": "latent",
@@ -862,7 +799,7 @@
      "subtitle": "在想象中训练与规划",
      "author": "Dr. Dezeming",
      "edition": "2026 年 · 第一版",
-     "pdf": "wm-latent.pdf",
+     "pdf": "v3-latent.pdf",
      "accent": "#0F766E",
      "accent2": "#B45309",
      "art": "logo1.png",
@@ -896,62 +833,10 @@
      "back_quote": "世界模型的价值不在预测得准，而在预测错了以后还能继续用。",
      "cover_accent": "#6FD3C0"
     },
-    "pdf": "wm-latent.pdf",
-    "pages": 83,
+    "pdf": "v3-latent.pdf",
+    "pages": 147,
     "chapters": 10,
-    "has_readme": false
-   },
-   {
-    "dir": "spatial",
-    "bookjson": {
-     "series": "世界模型技术",
-     "series_slug": "world-models",
-     "order": 6,
-     "title": "世界模型技术·空间册",
-     "cover_title": "世界模型技术",
-     "volume": "06",
-     "volume_name": "空间册",
-     "subtitle": "三维、具身与机器人",
-     "author": "Dr. Dezeming",
-     "edition": "2026 年 · 第一版",
-     "pdf": "wm-spatial.pdf",
-     "accent": "#A16207",
-     "accent2": "#1D4E6F",
-     "art": "logo14.png",
-     "art_pos": "48% 50%",
-     "art_back": "logo9.png",
-     "tag_line": "从看见，到在空间里行动。",
-     "back_title": "语言模型读完了互联网，<br>却仍然不知道桌子有多高",
-     "back_lead": "空间智能要解决的是三维里的理解、生成与行动：从图像重建场景，从文字生成可编辑的世界，让机器人在动手之前先推演后果。这一册从三维表示讲到 VLA 与自动驾驶，最后回到数据与评测这些不体面但决定成败的问题。",
-     "back_items": [
-      [
-       "第 1 章",
-       "Fei-Fei Li 的空间智能"
-      ],
-      [
-       "第 2 章",
-       "五类三维表示"
-      ],
-      [
-       "第 4 章",
-       "可编辑的世界生成"
-      ],
-      [
-       "第 6 章",
-       "RT-2、OpenVLA 与 π0"
-      ],
-      [
-       "第 9 章",
-       "数据、仿真与评测"
-      ]
-     ],
-     "back_quote": "智能不只需要语言，还需要在空间里把一件事做成。",
-     "cover_accent": "#E4B763"
-    },
-    "pdf": "wm-spatial.pdf",
-    "pages": 82,
-    "chapters": 10,
-    "has_readme": false
+    "has_readme": true
    },
    {
     "dir": "video",
@@ -966,7 +851,7 @@
      "subtitle": "生成一个可交互的世界",
      "author": "Dr. Dezeming",
      "edition": "2026 年 · 第一版",
-     "pdf": "wm-video.pdf",
+     "pdf": "v4-video.pdf",
      "accent": "#BE185D",
      "accent2": "#B45309",
      "art": "logo4.png",
@@ -1000,22 +885,125 @@
      "back_quote": "观众看的是画面，模型学的是因果；这两件事经常被混为一谈。",
      "cover_accent": "#F3A6C1"
     },
-    "pdf": "wm-video.pdf",
-    "pages": 80,
+    "pdf": "v4-video.pdf",
+    "pages": 139,
     "chapters": 10,
-    "has_readme": false
+    "has_readme": true
+   },
+   {
+    "dir": "jepa",
+    "bookjson": {
+     "series": "世界模型技术",
+     "series_slug": "world-models",
+     "order": 5,
+     "title": "世界模型技术·表征册",
+     "cover_title": "世界模型技术",
+     "volume": "05",
+     "volume_name": "表征册",
+     "subtitle": "JEPA 与自监督世界模型",
+     "author": "Dr. Dezeming",
+     "edition": "2026 年 · 第一版",
+     "pdf": "v5-jepa.pdf",
+     "accent": "#3730A3",
+     "accent2": "#B45309",
+     "art": "logo6.png",
+     "art_pos": "52% 48%",
+     "art_back": "logo3.png",
+     "tag_line": "不重建，只预测表征。",
+     "back_title": "如果预测的目标不是像素，<br>而是它在你脑中的那层表征",
+     "back_lead": "JEPA 把预测搬到表征空间：编码器看一段视频，预测器猜另一段视频的嵌入。它绕开了像素级重建的浪费，但必须回答一个新问题，怎么防止两个编码器一起塌缩到一个常数。这一册讲清这条路线的主张、实现与争议。",
+     "back_items": [
+      [
+       "第 1 章",
+       "LeCun 的三笔账"
+      ],
+      [
+       "第 3 章",
+       "塌缩的四种成因"
+      ],
+      [
+       "第 4 章",
+       "I-JEPA 的四块目标"
+      ],
+      [
+       "第 5 章",
+       "V-JEPA 2 与动作条件"
+      ],
+      [
+       "第 9 章",
+       "柏拉图式的同一张地图"
+      ]
+     ],
+     "back_quote": "预测什么，决定了一个模型最终学到什么。",
+     "cover_accent": "#A7AEF7"
+    },
+    "pdf": "v5-jepa.pdf",
+    "pages": 127,
+    "chapters": 9,
+    "has_readme": true
+   },
+   {
+    "dir": "spatial",
+    "bookjson": {
+     "series": "世界模型技术",
+     "series_slug": "world-models",
+     "order": 6,
+     "title": "世界模型技术·空间册",
+     "cover_title": "世界模型技术",
+     "volume": "06",
+     "volume_name": "空间册",
+     "subtitle": "三维、具身与机器人",
+     "author": "Dr. Dezeming",
+     "edition": "2026 年 · 第一版",
+     "pdf": "v6-spatial.pdf",
+     "accent": "#A16207",
+     "accent2": "#1D4E6F",
+     "art": "logo14.png",
+     "art_pos": "48% 50%",
+     "art_back": "logo9.png",
+     "tag_line": "从看见，到在空间里行动。",
+     "back_title": "语言模型读完了互联网，<br>却仍然不知道桌子有多高",
+     "back_lead": "空间智能要解决的是三维里的理解、生成与行动：从图像重建场景，从文字生成可编辑的世界，让机器人在动手之前先推演后果。这一册从三维表示讲到 VLA 与自动驾驶，最后回到数据与评测这些不体面但决定成败的问题。",
+     "back_items": [
+      [
+       "第 1 章",
+       "Fei-Fei Li 的空间智能"
+      ],
+      [
+       "第 2 章",
+       "五类三维表示"
+      ],
+      [
+       "第 4 章",
+       "可编辑的世界生成"
+      ],
+      [
+       "第 6 章",
+       "RT-2、OpenVLA 与 π0"
+      ],
+      [
+       "第 9 章",
+       "数据、仿真与评测"
+      ]
+     ],
+     "back_quote": "智能不只需要语言，还需要在空间里把一件事做成。",
+     "cover_accent": "#E4B763"
+    },
+    "pdf": "v6-spatial.pdf",
+    "pages": 145,
+    "chapters": 10,
+    "has_readme": true
    }
-  ],
-  "single": false
+  ]
  },
  "世界知识模型JEPA": {
-  "path": "世界知识模型JEPA",
+  "path": "E:\\Study\\世界知识模型JEPA",
   "books": [
    {
     "dir": "basics",
     "bookjson": {
      "series": "同一张世界的地图　三部曲",
-     "series_slug": "world-map-jepa",
+     "series_slug": "JEPA-World-Knowledge-Model",
      "title": "同一张世界的地图·入门篇",
      "cover_title": "同一张世界的地图",
      "volume": "01",
@@ -1031,7 +1019,7 @@
      ],
      "author": "Dr. Dezeming",
      "edition": "2026 年 · 第一版",
-     "pdf": "jepa-basics.pdf",
+     "pdf": "v1-basics.pdf",
      "accent": "#14507A",
      "accent2": "#A65B1E",
      "ice": "#9CC8E0",
@@ -1059,24 +1047,24 @@
        "世界模型与它的三笔账"
       ],
       [
-       "第 9 章",
-       "为什么不同的模型画出同一张地图"
+       "第 13 章",
+       "同一张地图"
       ]
      ],
      "back_quote": "“好视图，而不只是规模，才是建造柏拉图式表征的杠杆。”",
      "back_quote_src": "Balestriero & LeCun, 2026",
      "back_title_short": "入门篇"
     },
-    "pdf": "jepa-basics.pdf",
-    "pages": 74,
-    "chapters": 9,
+    "pdf": "v1-basics.pdf",
+    "pages": 147,
+    "chapters": 13,
     "has_readme": true
    },
    {
     "dir": "practice",
     "bookjson": {
      "series": "同一张世界的地图　三部曲",
-     "series_slug": "world-map-jepa",
+     "series_slug": "JEPA-World-Knowledge-Model",
      "title": "同一张世界的地图·进阶篇",
      "cover_title": "同一张世界的地图",
      "volume": "02",
@@ -1092,7 +1080,7 @@
      ],
      "author": "Dr. Dezeming",
      "edition": "2026 年 · 第一版",
-     "pdf": "jepa-practice.pdf",
+     "pdf": "v2-practice.pdf",
      "accent": "#0F5F5C",
      "accent2": "#A65B1E",
      "ice": "#9BD3C8",
@@ -1120,24 +1108,24 @@
        "V-JEPA 2 的三段训练"
       ],
       [
-       "第 9 章",
-       "对齐怎么量，42 倍怎么算"
+       "第 12 章",
+       "对齐的度量与规模"
       ]
      ],
      "back_quote": "“对齐不是一个数，而是一族数。”",
-     "back_quote_src": "本书第 9 章",
+     "back_quote_src": "本书第 12 章",
      "back_title_short": "进阶篇"
     },
-    "pdf": "jepa-practice.pdf",
-    "pages": 83,
-    "chapters": 9,
+    "pdf": "v2-practice.pdf",
+    "pages": 141,
+    "chapters": 12,
     "has_readme": true
    },
    {
     "dir": "theory",
     "bookjson": {
      "series": "同一张世界的地图　三部曲",
-     "series_slug": "world-map-jepa",
+     "series_slug": "JEPA-World-Knowledge-Model",
      "title": "同一张世界的地图·专业篇",
      "cover_title": "同一张世界的地图",
      "volume": "03",
@@ -1153,7 +1141,7 @@
      ],
      "author": "Dr. Dezeming",
      "edition": "2026 年 · 第一版",
-     "pdf": "jepa-theory.pdf",
+     "pdf": "v3-theory.pdf",
      "accent": "#43358C",
      "accent2": "#A65B1E",
      "ice": "#C0BCF0",
@@ -1186,19 +1174,18 @@
       ]
      ],
      "back_quote": "“地图不是领土，但两张独立画出的地图重合，这件事本身是关于世界的一个事实。”",
-     "back_quote_src": "本书第 8 章",
+     "back_quote_src": "本书第 11 章",
      "back_title_short": "专业篇"
     },
-    "pdf": "jepa-theory.pdf",
-    "pages": 78,
-    "chapters": 8,
+    "pdf": "v3-theory.pdf",
+    "pages": 128,
+    "chapters": 11,
     "has_readme": true
    }
-  ],
-  "single": false
+  ]
  },
  "具身智能技术\\Embodied-AI": {
-  "path": "具身智能技术\\Embodied-AI",
+  "path": "E:\\Study\\具身智能技术\\Embodied-AI",
   "books": [
    {
     "dir": "intro",
@@ -1210,7 +1197,7 @@
      "author": "Dr. Dezeming",
      "year": "2026",
      "edition": "2026 年 · 第一版",
-     "pdf": "embodied-intro.pdf",
+     "pdf": "v1-intro.pdf",
      "toc_sections": false,
      "cover": {
       "art": "logo7.png",
@@ -1266,8 +1253,8 @@
       "foot": "18 章 + 2 附录"
      }
     },
-    "pdf": "embodied-intro.pdf",
-    "pages": 156,
+    "pdf": "v1-intro.pdf",
+    "pages": 200,
     "chapters": 18,
     "has_readme": true
    },
@@ -1281,7 +1268,7 @@
      "author": "Dr. Dezeming",
      "year": "2026",
      "edition": "2026 年 · 第一版",
-     "pdf": "embodied-system.pdf",
+     "pdf": "v2-system.pdf",
      "toc_sections": true,
      "cover": {
       "art": "logo10.png",
@@ -1337,44 +1324,29 @@
       "foot": "21 章 + 4 附录"
      }
     },
-    "pdf": "embodied-system.pdf",
-    "pages": 205,
+    "pdf": "v2-system.pdf",
+    "pages": 278,
     "chapters": 21,
     "has_readme": true
    }
-  ],
-  "single": false
+  ]
  },
  "后端服务器技术": {
-  "path": "后端服务器技术",
+  "path": "E:\\Study\\后端服务器技术",
   "books": [
    {
     "dir": "beginner",
     "bookjson": {
      "title": "远程之门",
      "subtitle": "远程操作入门",
-     "pdf": "remote-gate-beginner.pdf",
+     "pdf": "v1-beginner.pdf",
      "author": "Dr. Dezeming",
      "year": "2026",
      "toc_sections": true
     },
-    "pdf": "remote-gate-beginner.pdf",
+    "pdf": "v1-beginner.pdf",
     "pages": 119,
     "chapters": 23,
-    "has_readme": true
-   },
-   {
-    "dir": "deep",
-    "bookjson": {
-     "title": "远程之门",
-     "subtitle": "协议、密码学与实现细节",
-     "pdf": "remote-gate-deep.pdf",
-     "author": "Dr. Dezeming",
-     "year": "2026"
-    },
-    "pdf": "remote-gate-deep.pdf",
-    "pages": 31,
-    "chapters": 6,
     "has_readme": true
    },
    {
@@ -1382,41 +1354,34 @@
     "bookjson": {
      "title": "远程之门",
      "subtitle": "远程操作的技术细节（进阶）",
-     "pdf": "remote-access-book.pdf",
+     "pdf": "v2-intermediate.pdf",
      "author": "Dr. Dezeming",
      "year": "2026"
     },
-    "pdf": "remote-access-book.pdf",
-    "pages": 151,
+    "pdf": "v2-intermediate.pdf",
+    "pages": 200,
     "chapters": 18,
     "has_readme": true
+   },
+   {
+    "dir": "deep",
+    "bookjson": {
+     "title": "远程之门",
+     "subtitle": "协议、密码学与实现细节",
+     "pdf": "v3-deep.pdf",
+     "author": "Dr. Dezeming",
+     "year": "2026"
+    },
+    "pdf": "v3-deep.pdf",
+    "pages": 59,
+    "chapters": 6,
+    "has_readme": true
    }
-  ],
-  "single": false
+  ]
  },
  "图像生成与编辑技术": {
-  "path": "图像生成与编辑技术",
+  "path": "E:\\Study\\图像生成与编辑技术",
   "books": [
-   {
-    "dir": "advanced",
-    "bookjson": {
-     "name": "advanced",
-     "series": "生成模型系列",
-     "title": "图像生成与编辑技术",
-     "subtitle": "流模型与一步生成",
-     "volume_label": "进阶篇",
-     "author": "Dr. Dezeming",
-     "year": "2026",
-     "pdf": "generative-models-02-advanced.pdf",
-     "toc_sections": true,
-     "cover": "cover.jpg",
-     "backcover": "backcover.jpg"
-    },
-    "pdf": "generative-models-02-advanced.pdf",
-    "pages": 53,
-    "chapters": 12,
-    "has_readme": true
-   },
    {
     "dir": "beginner",
     "bookjson": {
@@ -1427,14 +1392,34 @@
      "volume_label": "入门篇",
      "author": "Dr. Dezeming",
      "year": "2026",
-     "pdf": "generative-models-01-beginner.pdf",
+     "pdf": "v1-beginner.pdf",
      "toc_sections": true,
      "cover": "cover.jpg",
      "backcover": "backcover.jpg"
     },
-    "pdf": "generative-models-01-beginner.pdf",
-    "pages": 115,
+    "pdf": "v1-beginner.pdf",
+    "pages": 366,
     "chapters": 25,
+    "has_readme": true
+   },
+   {
+    "dir": "advanced",
+    "bookjson": {
+     "name": "advanced",
+     "series": "生成模型系列",
+     "title": "图像生成与编辑技术",
+     "subtitle": "流模型与一步生成",
+     "volume_label": "进阶篇",
+     "author": "Dr. Dezeming",
+     "year": "2026",
+     "pdf": "v2-advanced.pdf",
+     "toc_sections": true,
+     "cover": "cover.jpg",
+     "backcover": "backcover.jpg"
+    },
+    "pdf": "v2-advanced.pdf",
+    "pages": 171,
+    "chapters": 12,
     "has_readme": true
    },
    {
@@ -1447,21 +1432,20 @@
      "volume_label": "深入篇",
      "author": "Dr. Dezeming",
      "year": "2026",
-     "pdf": "generative-models-03-editing.pdf",
+     "pdf": "v3-editing.pdf",
      "toc_sections": true,
      "cover": "cover.jpg",
      "backcover": "backcover.jpg"
     },
-    "pdf": "generative-models-03-editing.pdf",
-    "pages": 52,
+    "pdf": "v3-editing.pdf",
+    "pages": 184,
     "chapters": 12,
     "has_readme": true
    }
-  ],
-  "single": false
+  ]
  },
  "大型软件开发技术": {
-  "path": "大型软件开发技术",
+  "path": "E:\\Study\\大型软件开发技术",
   "books": [
    {
     "dir": "vol1-basics",
@@ -1471,7 +1455,7 @@
      "volume": "入门篇",
      "full_title": "大型软件开发技术：入门篇",
      "subtitle": "用 C++ 从二十行代码到一个插件系统",
-     "pdf": "vol1-basics.pdf",
+     "pdf": "v1-basics.pdf",
      "author": "Dr. Dezeming",
      "year": "2026",
      "version": "1.0",
@@ -1487,7 +1471,7 @@
      "intro": "本书从一段二十行的 C++ 程序开始，逐步拆函数、拆文件、加载动态库、建立契约、处理事件与故障，最后做成一个可打包、可更新的插件系统。",
      "keywords": "C++, 插件系统, 动态库, 事件总线, 钩子, 组件化"
     },
-    "pdf": "vol1-basics.pdf",
+    "pdf": "v1-basics.pdf",
     "pages": 142,
     "chapters": 12,
     "has_readme": true
@@ -1501,7 +1485,7 @@
      "full_title": "大型软件开发技术：架构篇",
      "subtitle": "可扩展系统的内核、契约与协作机制",
      "series": "LARGE-SCALE SOFTWARE",
-     "pdf": "vol2-architecture.pdf",
+     "pdf": "v2-architecture.pdf",
      "author": "Dr. Dezeming",
      "year": "2026",
      "version": "1.0",
@@ -1516,8 +1500,8 @@
      "intro": "本册讨论可扩展系统的结构：内核与扩展点、事件与钩子、进程与隔离、公共服务与渲染接口，以及这些选择背后的取舍。",
      "keywords": "微内核, 扩展点, 事件总线, 进程隔离, 渲染服务, 插件架构"
     },
-    "pdf": "vol2-architecture.pdf",
-    "pages": 73,
+    "pdf": "v2-architecture.pdf",
+    "pages": 147,
     "chapters": 11,
     "has_readme": true
    },
@@ -1530,7 +1514,7 @@
      "full_title": "大型软件开发技术：工程篇",
      "subtitle": "组件模板、分发生态与稳定运行",
      "series": "LARGE-SCALE SOFTWARE",
-     "pdf": "vol3-engineering.pdf",
+     "pdf": "v3-engineering.pdf",
      "author": "Dr. Dezeming",
      "year": "2026",
      "version": "1.0",
@@ -1545,8 +1529,8 @@
      "intro": "本册讨论可扩展系统的工程化：组件模板与生成器、独立开发与 CI、打包签名与分发、灰度更新、故障恢复与可观测性。",
      "keywords": "组件模板, 契约包, 持续集成, 代码签名, 灰度发布, 可观测性"
     },
-    "pdf": "vol3-engineering.pdf",
-    "pages": 67,
+    "pdf": "v3-engineering.pdf",
+    "pages": 145,
     "chapters": 11,
     "has_readme": true
    },
@@ -1559,7 +1543,7 @@
      "full_title": "大型软件开发技术：模式篇",
      "subtitle": "二十三种可复用的解法",
      "series": "LARGE-SCALE SOFTWARE",
-     "pdf": "vol4-patterns.pdf",
+     "pdf": "v4-patterns.pdf",
      "author": "Dr. Dezeming",
      "year": "2026",
      "version": "1.0",
@@ -1574,16 +1558,15 @@
      "intro": "本书用真实编程场景讲二十三种设计模式，先讲清麻烦从哪来，再讲角色怎么分工、协作怎么走，最后说明适用的边界。",
      "keywords": "设计模式, 创建型, 结构型, 行为型, 软件设计, C++"
     },
-    "pdf": "vol4-patterns.pdf",
-    "pages": 152,
+    "pdf": "v4-patterns.pdf",
+    "pages": 238,
     "chapters": 23,
     "has_readme": true
    }
-  ],
-  "single": false
+  ]
  },
  "大规模GPU集群训练技术": {
-  "path": "大规模GPU集群训练技术",
+  "path": "E:\\Study\\大规模GPU集群训练技术",
   "books": [
    {
     "dir": "intro",
@@ -1595,7 +1578,7 @@
      "author": "Dr. Dezeming",
      "year": "2026",
      "version": "2026 年 11 月",
-     "pdf": "gpu-cluster-intro.pdf",
+     "pdf": "v1-intro.pdf",
      "toc_sections": true,
      "cover": "cover.jpg",
      "backcover": "backcover.jpg",
@@ -1604,8 +1587,8 @@
       "这本书讲的就是这台机器怎么运转：算力从哪里来，显存被谁吃掉，模型怎么切分，梯度怎么汇总，集群又会以哪些方式坏掉。全书不推公式，目标是让你看懂一次大规模训练里每个数字的来历。"
      ]
     },
-    "pdf": "gpu-cluster-intro.pdf",
-    "pages": 98,
+    "pdf": "v1-intro.pdf",
+    "pages": 156,
     "chapters": 15,
     "has_readme": true
    },
@@ -1619,7 +1602,7 @@
      "author": "Dr. Dezeming",
      "year": "2026",
      "version": "2026 年 11 月",
-     "pdf": "gpu-cluster-pro.pdf",
+     "pdf": "v2-pro.pdf",
      "toc_sections": true,
      "cover": "cover.jpg",
      "backcover": "backcover.jpg",
@@ -1628,16 +1611,15 @@
       "这本书把每一步的代价算清楚：集合通信传了多少字节，流水线留下了几个气泡，检查点要占多少带宽，故障率和恢复时间如何吃掉有效算力。也记录了那些论文里只写一行、现场要查三天的坑。"
      ]
     },
-    "pdf": "gpu-cluster-pro.pdf",
-    "pages": 236,
+    "pdf": "v2-pro.pdf",
+    "pages": 359,
     "chapters": 28,
     "has_readme": true
    }
-  ],
-  "single": false
+  ]
  },
  "大语言模型技术\\llm-book": {
-  "path": "大语言模型技术\\llm-book",
+  "path": "E:\\Study\\大语言模型技术\\llm-book",
   "books": [
    {
     "dir": "v1-intro",
@@ -1652,42 +1634,8 @@
      "toc_sections": false
     },
     "pdf": "v1-intro.pdf",
-    "pages": 172,
-    "chapters": 21,
-    "has_readme": true
-   },
-   {
-    "dir": "v10-systems",
-    "bookjson": {
-     "series": "大模型技术全景",
-     "volume": "训练系统篇",
-     "title": "大模型技术全景 · 训练系统篇：并行、显存与通信",
-     "subtitle": "并行、显存与通信",
-     "author": "Dr. Dezeming",
-     "year": "2026",
-     "pdf": "v10-systems.pdf",
-     "toc_sections": false
-    },
-    "pdf": "v10-systems.pdf",
-    "pages": 110,
-    "chapters": 8,
-    "has_readme": true
-   },
-   {
-    "dir": "v11-interpret",
-    "bookjson": {
-     "series": "大模型技术全景",
-     "volume": "可解释性与评测篇",
-     "title": "大模型技术全景 · 可解释性与评测篇：看得懂与测得准",
-     "subtitle": "看得懂与测得准",
-     "author": "Dr. Dezeming",
-     "year": "2026",
-     "pdf": "v11-interpret.pdf",
-     "toc_sections": false
-    },
-    "pdf": "v11-interpret.pdf",
-    "pages": 106,
-    "chapters": 8,
+    "pages": 243,
+    "chapters": 22,
     "has_readme": true
    },
    {
@@ -1703,7 +1651,7 @@
      "toc_sections": false
     },
     "pdf": "v2-basics.pdf",
-    "pages": 157,
+    "pages": 232,
     "chapters": 11,
     "has_readme": true
    },
@@ -1720,7 +1668,7 @@
      "toc_sections": false
     },
     "pdf": "v3-pretrain.pdf",
-    "pages": 147,
+    "pages": 220,
     "chapters": 12,
     "has_readme": true
    },
@@ -1737,8 +1685,8 @@
      "toc_sections": false
     },
     "pdf": "v4-architecture.pdf",
-    "pages": 113,
-    "chapters": 9,
+    "pages": 200,
+    "chapters": 10,
     "has_readme": true
    },
    {
@@ -1754,7 +1702,7 @@
      "toc_sections": false
     },
     "pdf": "v5-alignment.pdf",
-    "pages": 139,
+    "pages": 212,
     "chapters": 12,
     "has_readme": true
    },
@@ -1771,8 +1719,8 @@
      "toc_sections": false
     },
     "pdf": "v6-safety.pdf",
-    "pages": 119,
-    "chapters": 11,
+    "pages": 201,
+    "chapters": 12,
     "has_readme": true
    },
    {
@@ -1788,7 +1736,7 @@
      "toc_sections": false
     },
     "pdf": "v7-inference.pdf",
-    "pages": 125,
+    "pages": 202,
     "chapters": 10,
     "has_readme": true
    },
@@ -1805,7 +1753,7 @@
      "toc_sections": false
     },
     "pdf": "v8-apps.pdf",
-    "pages": 124,
+    "pages": 200,
     "chapters": 10,
     "has_readme": true
    },
@@ -1822,40 +1770,49 @@
      "toc_sections": false
     },
     "pdf": "v9-multimodal.pdf",
-    "pages": 108,
+    "pages": 191,
     "chapters": 9,
     "has_readme": true
-   }
-  ],
-  "single": false
- },
- "强化学习技术": {
-  "path": "强化学习技术",
-  "books": [
+   },
    {
-    "dir": "algorithms",
+    "dir": "v10-systems",
     "bookjson": {
-     "series": "强化学习系列",
-     "volume": "算法篇",
-     "subtitle": "从贝尔曼方程到 PPO 与离线强化学习",
-     "title": "强化学习系列 · 算法篇：从贝尔曼方程到 PPO 与离线强化学习",
-     "pdf": "rl-v3-algorithms.pdf",
+     "series": "大模型技术全景",
+     "volume": "训练系统篇",
+     "title": "大模型技术全景 · 训练系统篇：并行、显存与通信",
+     "subtitle": "并行、显存与通信",
      "author": "Dr. Dezeming",
      "year": "2026",
-     "volno": "03",
-     "voltotal": 4,
-     "en": "REINFORCEMENT LEARNING · THE ALGORITHMS",
-     "accent": "5E3A5C",
-     "toc_depth": 1,
-     "subject": "强化学习的形式化、算法推导与实现",
-     "keywords": "强化学习, 贝尔曼方程, 时序差分, 策略梯度, PPO, SAC, 离线强化学习",
-     "blurb": "这一册回到公式，把贝尔曼方程、策略梯度、广义优势估计和裁剪目标一层层推下来，同时给出可以对照的实现。每个算法都放回它要解决的麻烦里，既不神化也不省略。"
+     "pdf": "v10-systems.pdf",
+     "toc_sections": false
     },
-    "pdf": "rl-v3-algorithms.pdf",
-    "pages": 108,
-    "chapters": 20,
+    "pdf": "v10-systems.pdf",
+    "pages": 190,
+    "chapters": 8,
     "has_readme": true
    },
+   {
+    "dir": "v11-interpret",
+    "bookjson": {
+     "series": "大模型技术全景",
+     "volume": "可解释性与评测篇",
+     "title": "大模型技术全景 · 可解释性与评测篇：看得懂与测得准",
+     "subtitle": "看得懂与测得准",
+     "author": "Dr. Dezeming",
+     "year": "2026",
+     "pdf": "v11-interpret.pdf",
+     "toc_sections": false
+    },
+    "pdf": "v11-interpret.pdf",
+    "pages": 190,
+    "chapters": 8,
+    "has_readme": true
+   }
+  ]
+ },
+ "强化学习技术": {
+  "path": "E:\\Study\\强化学习技术",
+  "books": [
    {
     "dir": "concepts",
     "bookjson": {
@@ -1863,7 +1820,7 @@
      "volume": "概念篇",
      "subtitle": "从老虎机到推理模型的全景图",
      "title": "强化学习系列 · 概念篇：从老虎机到推理模型的全景图",
-     "pdf": "rl-v1-concepts.pdf",
+     "pdf": "v1-concepts.pdf",
      "author": "Dr. Dezeming",
      "year": "2026",
      "volno": "01",
@@ -1875,8 +1832,8 @@
      "keywords": "强化学习, 智能体, 奖励, DQN, AlphaGo, PPO, RLHF, 推理模型, 具身智能",
      "blurb": "这一册不写公式，把强化学习的每个词放回它要解决的问题里，再把今天还在用的方向走一遍：从老虎机、Atari、AlphaGo，到推荐、芯片、机器人、大模型对齐、推理训练、多智能体与具身智能。读完能看懂一条技术新闻在说什么，也知道每个新名词大概在哪一格。"
     },
-    "pdf": "rl-v1-concepts-new.pdf",
-    "pages": 254,
+    "pdf": "v1-concepts.pdf",
+    "pages": 377,
     "chapters": 21,
     "has_readme": true
    },
@@ -1887,7 +1844,7 @@
      "volume": "动手篇",
      "subtitle": "在游戏里训练一个会决策的程序",
      "title": "强化学习系列 · 动手篇：在游戏里训练一个会决策的程序",
-     "pdf": "rl-v2-hands-on.pdf",
+     "pdf": "v2-hands-on.pdf",
      "author": "Dr. Dezeming",
      "year": "2026",
      "volno": "02",
@@ -1899,9 +1856,33 @@
      "keywords": "强化学习, Gymnasium, CartPole, DQN, PPO, 实验方法",
      "blurb": "这一册把概念变成能跑的程序。从 CartPole 开始，自己写环境，用表格学会走路，再换成神经网络，一路做到 PPO。所有曲线都是真跑出来的，失败的实验也留在书里。"
     },
-    "pdf": "rl-v2-hands-on.pdf",
-    "pages": 105,
+    "pdf": "v2-hands-on.pdf",
+    "pages": 280,
     "chapters": 19,
+    "has_readme": true
+   },
+   {
+    "dir": "algorithms",
+    "bookjson": {
+     "series": "强化学习系列",
+     "volume": "算法篇",
+     "subtitle": "从贝尔曼方程到 PPO 与离线强化学习",
+     "title": "强化学习系列 · 算法篇：从贝尔曼方程到 PPO 与离线强化学习",
+     "pdf": "v3-algorithms.pdf",
+     "author": "Dr. Dezeming",
+     "year": "2026",
+     "volno": "03",
+     "voltotal": 4,
+     "en": "REINFORCEMENT LEARNING · THE ALGORITHMS",
+     "accent": "5E3A5C",
+     "toc_depth": 1,
+     "subject": "强化学习的形式化、算法推导与实现",
+     "keywords": "强化学习, 贝尔曼方程, 时序差分, 策略梯度, PPO, SAC, 离线强化学习",
+     "blurb": "这一册回到公式，把贝尔曼方程、策略梯度、广义优势估计和裁剪目标一层层推下来，同时给出可以对照的实现。每个算法都放回它要解决的麻烦里，既不神化也不省略。"
+    },
+    "pdf": "v3-algorithms.pdf",
+    "pages": 271,
+    "chapters": 20,
     "has_readme": true
    },
    {
@@ -1911,7 +1892,7 @@
      "volume": "大模型篇",
      "subtitle": "从人类反馈到推理模型",
      "title": "强化学习系列 · 大模型篇：从人类反馈到推理模型",
-     "pdf": "rl-v4-llm.pdf",
+     "pdf": "v4-llm.pdf",
      "author": "Dr. Dezeming",
      "year": "2026",
      "volno": "04",
@@ -1923,270 +1904,16 @@
      "keywords": "强化学习, RLHF, DPO, GRPO, RLVR, 推理模型, Agent",
      "blurb": "这一册把强化学习用到语言模型上。偏好如何变成奖励，PPO 在千亿参数上遇到什么麻烦，DPO 怎样把强化学习化简成分类，可验证奖励又为什么让推理能力变得可以训练。"
     },
-    "pdf": "rl-v4-llm.pdf",
-    "pages": 113,
+    "pdf": "v4-llm.pdf",
+    "pages": 246,
     "chapters": 19,
     "has_readme": true
    }
-  ],
-  "single": false
- },
- "摄影学技术": {
-  "path": "摄影学技术",
-  "books": [],
-  "single": true
+  ]
  },
  "计算机物理模拟技术\\physics-sim": {
-  "path": "计算机物理模拟技术\\physics-sim",
+  "path": "E:\\Study\\计算机物理模拟技术\\physics-sim",
   "books": [
-   {
-    "dir": "deform",
-    "bookjson": {
-     "series": "物理模拟技术",
-     "series_en": "PHYSICS SIMULATION",
-     "series_slug": "physics-sim",
-     "order": 4,
-     "title": "物理模拟技术·柔体、布料与断裂",
-     "cover_title": "物理模拟技术",
-     "volume": "04",
-     "volume_name": "柔体、布料与断裂",
-     "subtitle": "会皱、会断、会回弹",
-     "author": "Dr. Dezeming",
-     "edition": "2026 年 · 第一版",
-     "pdf": "ps-deform.pdf",
-     "accent": "#7A2F45",
-     "accent2": "#A65B1E",
-     "cover_accent": "#E3A7B4",
-     "ice": "#E8BCC6",
-     "art": "logo10.png",
-     "art_back": "logo11.png",
-     "art_pos": "50% 50%",
-     "tag_line": "柔体的难点不在形变，而在不塌、不穿、不炸。",
-     "cover_tag": "弹簧、有限元、投影动力学<br>一直讲到布料撕裂与脆性破碎",
-     "ticks": [
-      "弹簧",
-      "FEM",
-      "壳与杆",
-      "断裂"
-     ],
-     "back_title": "一块布为什么会有褶<br>一块玻璃为什么会碎成那样",
-     "back_lead": "柔体模拟的主线是把连续介质的能量写成离散形式，再想办法在有限时间里把它最小化。这一册从弹簧质点讲到 XPBD、Neo-Hookean、投影动力学、离散壳与弹性杆，最后落到自碰撞、撕裂与脆性断裂。",
-     "back_items": [
-      [
-       "第 2 章",
-       "PBD 与 XPBD"
-      ],
-      [
-       "第 4 章",
-       "材料模型与粘弹性"
-      ],
-      [
-       "第 6 章",
-       "投影动力学"
-      ],
-      [
-       "第 9 章",
-       "自碰撞与 IPC"
-      ],
-      [
-       "第 10 章",
-       "断裂与破碎"
-      ]
-     ],
-     "back_quote": "柔体模拟的每一步，都是在刚度和稳定之间讨价还价。",
-     "toc_sections": true
-    },
-    "pdf": "ps-deform.pdf",
-    "pages": 109,
-    "chapters": 12,
-    "has_readme": false
-   },
-   {
-    "dir": "diff",
-    "bookjson": {
-     "series": "物理模拟技术",
-     "series_en": "PHYSICS SIMULATION",
-     "series_slug": "physics-sim",
-     "order": 8,
-     "title": "物理模拟技术·可微物理与神经模拟",
-     "cover_title": "物理模拟技术",
-     "volume": "08",
-     "volume_name": "可微物理与神经模拟",
-     "subtitle": "让梯度穿过时间",
-     "author": "Dr. Dezeming",
-     "edition": "2026 年 · 第一版",
-     "pdf": "ps-diff.pdf",
-     "accent": "#52286B",
-     "accent2": "#A65B1E",
-     "cover_accent": "#C7A6DE",
-     "ice": "#D2B8E6",
-     "art": "logo3.png",
-     "art_back": "logo5.png",
-     "art_pos": "50% 50%",
-     "tag_line": "模拟器不只回答问题，还要回答“该改哪里”。",
-     "cover_tag": "伴随法、可微求解器、图网络<br>与物理与学习的混合",
-     "ticks": [
-      "伴随",
-      "可微",
-      "图网络",
-      "Sim2Real"
-     ],
-     "back_title": "如果模拟器可导<br>它就不只是预测，还能被优化",
-     "back_lead": "可微物理把整个时间步进当成一个可求导的程序：梯度可以穿过碰撞、流体与柔体，用来做参数辨识、形状优化、控制与系统辨识。这一册讲自动微分、伴随方程、可微求解器的实现难点，也讲神经代理模型、算子学习与混合模拟。",
-     "back_items": [
-      [
-       "第 2 章",
-       "自动微分"
-      ],
-      [
-       "第 4 章",
-       "可微刚体与接触"
-      ],
-      [
-       "第 5 章",
-       "流体的伴随方程"
-      ],
-      [
-       "第 7 章",
-       "长时窗与梯度"
-      ],
-      [
-       "第 11 章",
-       "混合模拟与 Sim2Real"
-      ]
-     ],
-     "back_quote": "梯度是模拟器最昂贵、也最有用的一种输出。",
-     "toc_sections": true
-    },
-    "pdf": "ps-diff.pdf",
-    "pages": 103,
-    "chapters": 12,
-    "has_readme": false
-   },
-   {
-    "dir": "fluid",
-    "bookjson": {
-     "series": "物理模拟技术",
-     "series_en": "PHYSICS SIMULATION",
-     "series_slug": "physics-sim",
-     "order": 5,
-     "title": "物理模拟技术·流体、烟火与水面",
-     "cover_title": "物理模拟技术",
-     "volume": "05",
-     "volume_name": "流体、烟火与水面",
-     "subtitle": "把连续介质装进格子",
-     "author": "Dr. Dezeming",
-     "edition": "2026 年 · 第一版",
-     "pdf": "ps-fluid.pdf",
-     "accent": "#14556E",
-     "accent2": "#B45309",
-     "cover_accent": "#8FC3D8",
-     "ice": "#A6D2E2",
-     "art": "logo12.png",
-     "art_back": "logo13.png",
-     "art_pos": "50% 50%",
-     "tag_line": "烟要飘，水要泼，火要亮。",
-     "cover_tag": "从纳维-斯托克斯到 FLIP<br>再到海面与爆炸",
-     "ticks": [
-      "NS 方程",
-      "投影",
-      "FLIP",
-      "白水"
-     ],
-     "back_title": "一帧烟、一池水、一片海<br>背后是同一组方程的不同脾气",
-     "back_lead": "流体是物理模拟里方法最杂的一块：网格法稳、粒子法活、混合法两头兼顾。这一册按方程逐项拆解，讲平流、投影、涡量、自由表面、SPH、FLIP/APIC、表面张力、燃烧与海洋谱，也讲它们各自会在哪里坏掉。",
-     "back_items": [
-      [
-       "第 2 章",
-       "纳维-斯托克斯逐项"
-      ],
-      [
-       "第 4 章",
-       "平流与耗散"
-      ],
-      [
-       "第 7 章",
-       "SPH 的核与压力"
-      ],
-      [
-       "第 8 章",
-       "FLIP 与 APIC"
-      ],
-      [
-       "第 11 章",
-       "海面、泡沫与白水"
-      ]
-     ],
-     "back_quote": "流体模拟没有万能解，只有针对某种流体调好的那一套。",
-     "toc_sections": true
-    },
-    "pdf": "ps-fluid.pdf",
-    "pages": 110,
-    "chapters": 13,
-    "has_readme": false
-   },
-   {
-    "dir": "gpu",
-    "bookjson": {
-     "series": "物理模拟技术",
-     "series_en": "PHYSICS SIMULATION",
-     "series_slug": "physics-sim",
-     "order": 7,
-     "title": "物理模拟技术·高性能实现与 GPU 并行",
-     "cover_title": "物理模拟技术",
-     "volume": "07",
-     "volume_name": "高性能实现与 GPU 并行",
-     "subtitle": "一帧十六毫秒的预算",
-     "author": "Dr. Dezeming",
-     "edition": "2026 年 · 第一版",
-     "pdf": "ps-gpu.pdf",
-     "accent": "#245C3A",
-     "accent2": "#B45309",
-     "cover_accent": "#9DD0AE",
-     "ice": "#B4DCC2",
-     "art": "logo1.png",
-     "art_back": "logo2.png",
-     "art_pos": "50% 50%",
-     "tag_line": "算法决定上限，工程决定能不能到。",
-     "cover_tag": "数据布局、稀疏网格、并行求解<br>以及实时引擎的确定性",
-     "ticks": [
-      "缓存",
-      "GPU",
-      "稀疏",
-      "确定性"
-     ],
-     "back_title": "同一个算法<br>为什么在 GPU 上快二十倍，也可能慢十倍",
-     "back_lead": "物理模拟的性能不是把循环改成并行就够了：内存布局、访存模式、原子操作、求解器收敛速度都会改变结果。这一册讲数据布局、CUDA 与稀疏结构、GPU 上的多重网格、粒子邻域、图着色，以及实时引擎的固定步长与可回滚。",
-     "back_items": [
-      [
-       "第 2 章",
-       "缓存与数据布局"
-      ],
-      [
-       "第 4 章",
-       "稀疏网格与 VDB"
-      ],
-      [
-       "第 5 章",
-       "GPU 上的线性求解"
-      ],
-      [
-       "第 6 章",
-       "粒子排序与邻域"
-      ],
-      [
-       "第 9 章",
-       "确定性、回滚与网络同步"
-      ]
-     ],
-     "back_quote": "并行不是加速按钮，它会把每一个坏决定放大。",
-     "toc_sections": true
-    },
-    "pdf": "ps-gpu.pdf",
-    "pages": 92,
-    "chapters": 11,
-    "has_readme": false
-   },
    {
     "dir": "intro",
     "bookjson": {
@@ -2201,7 +1928,7 @@
      "subtitle": "从抛物线到可微世界",
      "author": "Dr. Dezeming",
      "edition": "2026 年 · 第一版",
-     "pdf": "ps-intro.pdf",
+     "pdf": "v1-intro.pdf",
      "accent": "#1D4E5F",
      "accent2": "#B45309",
      "cover_accent": "#8FBEDC",
@@ -2244,10 +1971,10 @@
      "back_quote": "模拟不是把世界算准，而是把世界算到看起来对、并且来得及。",
      "toc_sections": true
     },
-    "pdf": "ps-intro.pdf",
+    "pdf": "v1-intro.pdf",
     "pages": 109,
     "chapters": 12,
-    "has_readme": false
+    "has_readme": true
    },
    {
     "dir": "math",
@@ -2263,7 +1990,7 @@
      "subtitle": "描述运动与变形的语言",
      "author": "Dr. Dezeming",
      "edition": "2026 年 · 第一版",
-     "pdf": "ps-math.pdf",
+     "pdf": "v2-math.pdf",
      "accent": "#3A3A6E",
      "accent2": "#A65B1E",
      "cover_accent": "#B7B3E0",
@@ -2306,72 +2033,10 @@
      "back_quote": "算不对，往往不是代码写错了，而是数学前提不成立。",
      "toc_sections": true
     },
-    "pdf": "ps-math.pdf",
+    "pdf": "v2-math.pdf",
     "pages": 117,
     "chapters": 12,
-    "has_readme": false
-   },
-   {
-    "dir": "particle",
-    "bookjson": {
-     "series": "物理模拟技术",
-     "series_en": "PHYSICS SIMULATION",
-     "series_slug": "physics-sim",
-     "order": 6,
-     "title": "物理模拟技术·颗粒、雪与物质点法",
-     "cover_title": "物理模拟技术",
-     "volume": "06",
-     "volume_name": "颗粒、雪与物质点法",
-     "subtitle": "沙、雪、泡沫与岩浆",
-     "author": "Dr. Dezeming",
-     "edition": "2026 年 · 第一版",
-     "pdf": "ps-particle.pdf",
-     "accent": "#6E5A1E",
-     "accent2": "#A65B1E",
-     "cover_accent": "#DCC98D",
-     "ice": "#E4D6A8",
-     "art": "logo14.png",
-     "art_back": "logo15.png",
-     "art_pos": "50% 50%",
-     "tag_line": "沙既是颗粒，也是连续体。",
-     "cover_tag": "从库仑摩擦的沙堆<br>到 MPM 里的雪与泡沫",
-     "ticks": [
-      "DEM",
-      "μ(I)",
-      "MPM",
-      "相变"
-     ],
-     "back_title": "沙堆为什么会塌<br>雪为什么会被压实",
-     "back_lead": "颗粒物质介于固体与流体之间：静止时能堆成陡坡，流动时又像液体。这一册从离散元讲到 μ(I) 流变，再到物质点法的完整循环、MLS-MPM、雪与泡沫的本构、相变与大规模并行。",
-     "back_items": [
-      [
-       "第 1 章",
-       "沙堆的悖论"
-      ],
-      [
-       "第 4 章",
-       "MPM 的基本循环"
-      ],
-      [
-       "第 6 章",
-       "雪、泡沫与相变"
-      ],
-      [
-       "第 7 章",
-       "隐式 MPM"
-      ],
-      [
-       "第 10 章",
-       "百万颗粒的 GPU 实现"
-      ]
-     ],
-     "back_quote": "颗粒模拟的每一步，都在决定它这一刻算固体还是算流体。",
-     "toc_sections": true
-    },
-    "pdf": "ps-particle.pdf",
-    "pages": 96,
-    "chapters": 11,
-    "has_readme": false
+    "has_readme": true
    },
    {
     "dir": "rigid",
@@ -2387,7 +2052,7 @@
      "subtitle": "让物体撞在一起",
      "author": "Dr. Dezeming",
      "edition": "2026 年 · 第一版",
-     "pdf": "ps-rigid.pdf",
+     "pdf": "v3-rigid.pdf",
      "accent": "#6B4A22",
      "accent2": "#A65B1E",
      "cover_accent": "#E0BE8F",
@@ -2430,59 +2095,347 @@
      "back_quote": "让一摞箱子安静地站着，比让水花溅起来更难。",
      "toc_sections": true
     },
-    "pdf": "ps-rigid.pdf",
-    "pages": 102,
-    "chapters": 12,
-    "has_readme": false
-   }
-  ],
-  "single": false
- },
- "量子学技术": {
-  "path": "量子学技术",
-  "books": [
-   {
-    "dir": "computing",
-    "bookjson": {
-     "title": "量子计算与算法",
-     "subtitle": "从量子比特到因式分解",
-     "series": "量子学技术",
-     "volume": "第三册",
-     "author": "Dr. Dezeming",
-     "year": "2026",
-     "pdf": "03-computing.pdf",
-     "accent": "#a8c8a4",
-     "subject": "量子学技术：量子计算与算法",
-     "keywords": [
-      "量子学技术",
-      "量子计算与算法"
-     ]
-    },
-    "pdf": "03-computing.pdf",
-    "pages": 48,
+    "pdf": "v3-rigid.pdf",
+    "pages": 137,
     "chapters": 12,
     "has_readme": true
    },
    {
-    "dir": "devices",
+    "dir": "deform",
     "bookjson": {
-     "title": "量子器件与硬件平台",
-     "subtitle": "超导、离子、原子与光子",
+     "series": "物理模拟技术",
+     "series_en": "PHYSICS SIMULATION",
+     "series_slug": "physics-sim",
+     "order": 4,
+     "title": "物理模拟技术·柔体、布料与断裂",
+     "cover_title": "物理模拟技术",
+     "volume": "04",
+     "volume_name": "柔体、布料与断裂",
+     "subtitle": "会皱、会断、会回弹",
+     "author": "Dr. Dezeming",
+     "edition": "2026 年 · 第一版",
+     "pdf": "v4-deform.pdf",
+     "accent": "#7A2F45",
+     "accent2": "#A65B1E",
+     "cover_accent": "#E3A7B4",
+     "ice": "#E8BCC6",
+     "art": "logo10.png",
+     "art_back": "logo11.png",
+     "art_pos": "50% 50%",
+     "tag_line": "柔体的难点不在形变，而在不塌、不穿、不炸。",
+     "cover_tag": "弹簧、有限元、投影动力学<br>一直讲到布料撕裂与脆性破碎",
+     "ticks": [
+      "弹簧",
+      "FEM",
+      "壳与杆",
+      "断裂"
+     ],
+     "back_title": "一块布为什么会有褶<br>一块玻璃为什么会碎成那样",
+     "back_lead": "柔体模拟的主线是把连续介质的能量写成离散形式，再想办法在有限时间里把它最小化。这一册从弹簧质点讲到 XPBD、Neo-Hookean、投影动力学、离散壳与弹性杆，最后落到自碰撞、撕裂与脆性断裂。",
+     "back_items": [
+      [
+       "第 2 章",
+       "PBD 与 XPBD"
+      ],
+      [
+       "第 4 章",
+       "材料模型与粘弹性"
+      ],
+      [
+       "第 6 章",
+       "投影动力学"
+      ],
+      [
+       "第 9 章",
+       "自碰撞与 IPC"
+      ],
+      [
+       "第 10 章",
+       "断裂与破碎"
+      ]
+     ],
+     "back_quote": "柔体模拟的每一步，都是在刚度和稳定之间讨价还价。",
+     "toc_sections": true
+    },
+    "pdf": "v4-deform.pdf",
+    "pages": 152,
+    "chapters": 12,
+    "has_readme": true
+   },
+   {
+    "dir": "fluid",
+    "bookjson": {
+     "series": "物理模拟技术",
+     "series_en": "PHYSICS SIMULATION",
+     "series_slug": "physics-sim",
+     "order": 5,
+     "title": "物理模拟技术·流体、烟火与水面",
+     "cover_title": "物理模拟技术",
+     "volume": "05",
+     "volume_name": "流体、烟火与水面",
+     "subtitle": "把连续介质装进格子",
+     "author": "Dr. Dezeming",
+     "edition": "2026 年 · 第一版",
+     "pdf": "v5-fluid.pdf",
+     "accent": "#14556E",
+     "accent2": "#B45309",
+     "cover_accent": "#8FC3D8",
+     "ice": "#A6D2E2",
+     "art": "logo12.png",
+     "art_back": "logo13.png",
+     "art_pos": "50% 50%",
+     "tag_line": "烟要飘，水要泼，火要亮。",
+     "cover_tag": "从纳维-斯托克斯到 FLIP<br>再到海面与爆炸",
+     "ticks": [
+      "NS 方程",
+      "投影",
+      "FLIP",
+      "白水"
+     ],
+     "back_title": "一帧烟、一池水、一片海<br>背后是同一组方程的不同脾气",
+     "back_lead": "流体是物理模拟里方法最杂的一块：网格法稳、粒子法活、混合法两头兼顾。这一册按方程逐项拆解，讲平流、投影、涡量、自由表面、SPH、FLIP/APIC、表面张力、燃烧与海洋谱，也讲它们各自会在哪里坏掉。",
+     "back_items": [
+      [
+       "第 2 章",
+       "纳维-斯托克斯逐项"
+      ],
+      [
+       "第 4 章",
+       "平流与耗散"
+      ],
+      [
+       "第 7 章",
+       "SPH 的核与压力"
+      ],
+      [
+       "第 8 章",
+       "FLIP 与 APIC"
+      ],
+      [
+       "第 11 章",
+       "海面、泡沫与白水"
+      ]
+     ],
+     "back_quote": "流体模拟没有万能解，只有针对某种流体调好的那一套。",
+     "toc_sections": true
+    },
+    "pdf": "v5-fluid.pdf",
+    "pages": 110,
+    "chapters": 13,
+    "has_readme": true
+   },
+   {
+    "dir": "particle",
+    "bookjson": {
+     "series": "物理模拟技术",
+     "series_en": "PHYSICS SIMULATION",
+     "series_slug": "physics-sim",
+     "order": 6,
+     "title": "物理模拟技术·颗粒、雪与物质点法",
+     "cover_title": "物理模拟技术",
+     "volume": "06",
+     "volume_name": "颗粒、雪与物质点法",
+     "subtitle": "沙、雪、泡沫与岩浆",
+     "author": "Dr. Dezeming",
+     "edition": "2026 年 · 第一版",
+     "pdf": "v6-particle.pdf",
+     "accent": "#6E5A1E",
+     "accent2": "#A65B1E",
+     "cover_accent": "#DCC98D",
+     "ice": "#E4D6A8",
+     "art": "logo14.png",
+     "art_back": "logo15.png",
+     "art_pos": "50% 50%",
+     "tag_line": "沙既是颗粒，也是连续体。",
+     "cover_tag": "从库仑摩擦的沙堆<br>到 MPM 里的雪与泡沫",
+     "ticks": [
+      "DEM",
+      "μ(I)",
+      "MPM",
+      "相变"
+     ],
+     "back_title": "沙堆为什么会塌<br>雪为什么会被压实",
+     "back_lead": "颗粒物质介于固体与流体之间：静止时能堆成陡坡，流动时又像液体。这一册从离散元讲到 μ(I) 流变，再到物质点法的完整循环、MLS-MPM、雪与泡沫的本构、相变与大规模并行。",
+     "back_items": [
+      [
+       "第 1 章",
+       "沙堆的悖论"
+      ],
+      [
+       "第 4 章",
+       "MPM 的基本循环"
+      ],
+      [
+       "第 6 章",
+       "雪、泡沫与相变"
+      ],
+      [
+       "第 7 章",
+       "隐式 MPM"
+      ],
+      [
+       "第 10 章",
+       "百万颗粒的 GPU 实现"
+      ]
+     ],
+     "back_quote": "颗粒模拟的每一步，都在决定它这一刻算固体还是算流体。",
+     "toc_sections": true
+    },
+    "pdf": "v6-particle.pdf",
+    "pages": 132,
+    "chapters": 11,
+    "has_readme": true
+   },
+   {
+    "dir": "gpu",
+    "bookjson": {
+     "series": "物理模拟技术",
+     "series_en": "PHYSICS SIMULATION",
+     "series_slug": "physics-sim",
+     "order": 7,
+     "title": "物理模拟技术·高性能实现与 GPU 并行",
+     "cover_title": "物理模拟技术",
+     "volume": "07",
+     "volume_name": "高性能实现与 GPU 并行",
+     "subtitle": "一帧十六毫秒的预算",
+     "author": "Dr. Dezeming",
+     "edition": "2026 年 · 第一版",
+     "pdf": "v7-gpu.pdf",
+     "accent": "#245C3A",
+     "accent2": "#B45309",
+     "cover_accent": "#9DD0AE",
+     "ice": "#B4DCC2",
+     "art": "logo1.png",
+     "art_back": "logo2.png",
+     "art_pos": "50% 50%",
+     "tag_line": "算法决定上限，工程决定能不能到。",
+     "cover_tag": "数据布局、稀疏网格、并行求解<br>以及实时引擎的确定性",
+     "ticks": [
+      "缓存",
+      "GPU",
+      "稀疏",
+      "确定性"
+     ],
+     "back_title": "同一个算法<br>为什么在 GPU 上快二十倍，也可能慢十倍",
+     "back_lead": "物理模拟的性能不是把循环改成并行就够了：内存布局、访存模式、原子操作、求解器收敛速度都会改变结果。这一册讲数据布局、CUDA 与稀疏结构、GPU 上的多重网格、粒子邻域、图着色，以及实时引擎的固定步长与可回滚。",
+     "back_items": [
+      [
+       "第 2 章",
+       "缓存与数据布局"
+      ],
+      [
+       "第 4 章",
+       "稀疏网格与 VDB"
+      ],
+      [
+       "第 5 章",
+       "GPU 上的线性求解"
+      ],
+      [
+       "第 6 章",
+       "粒子排序与邻域"
+      ],
+      [
+       "第 9 章",
+       "确定性、回滚与网络同步"
+      ]
+     ],
+     "back_quote": "并行不是加速按钮，它会把每一个坏决定放大。",
+     "toc_sections": true
+    },
+    "pdf": "v7-gpu.pdf",
+    "pages": 122,
+    "chapters": 11,
+    "has_readme": true
+   },
+   {
+    "dir": "diff",
+    "bookjson": {
+     "series": "物理模拟技术",
+     "series_en": "PHYSICS SIMULATION",
+     "series_slug": "physics-sim",
+     "order": 8,
+     "title": "物理模拟技术·可微物理与神经模拟",
+     "cover_title": "物理模拟技术",
+     "volume": "08",
+     "volume_name": "可微物理与神经模拟",
+     "subtitle": "让梯度穿过时间",
+     "author": "Dr. Dezeming",
+     "edition": "2026 年 · 第一版",
+     "pdf": "v8-diff.pdf",
+     "accent": "#52286B",
+     "accent2": "#A65B1E",
+     "cover_accent": "#C7A6DE",
+     "ice": "#D2B8E6",
+     "art": "logo3.png",
+     "art_back": "logo5.png",
+     "art_pos": "50% 50%",
+     "tag_line": "模拟器不只回答问题，还要回答“该改哪里”。",
+     "cover_tag": "伴随法、可微求解器、图网络<br>与物理与学习的混合",
+     "ticks": [
+      "伴随",
+      "可微",
+      "图网络",
+      "Sim2Real"
+     ],
+     "back_title": "如果模拟器可导<br>它就不只是预测，还能被优化",
+     "back_lead": "可微物理把整个时间步进当成一个可求导的程序：梯度可以穿过碰撞、流体与柔体，用来做参数辨识、形状优化、控制与系统辨识。这一册讲自动微分、伴随方程、可微求解器的实现难点，也讲神经代理模型、算子学习与混合模拟。",
+     "back_items": [
+      [
+       "第 2 章",
+       "自动微分"
+      ],
+      [
+       "第 4 章",
+       "可微刚体与接触"
+      ],
+      [
+       "第 5 章",
+       "流体的伴随方程"
+      ],
+      [
+       "第 7 章",
+       "长时窗与梯度"
+      ],
+      [
+       "第 11 章",
+       "混合模拟与 Sim2Real"
+      ]
+     ],
+     "back_quote": "梯度是模拟器最昂贵、也最有用的一种输出。",
+     "toc_sections": true
+    },
+    "pdf": "v8-diff.pdf",
+    "pages": 145,
+    "chapters": 12,
+    "has_readme": true
+   }
+  ]
+ },
+ "量子学技术": {
+  "path": "E:\\Study\\量子学技术",
+  "books": [
+   {
+    "dir": "intro",
+    "bookjson": {
+     "title": "量子技术入门",
+     "subtitle": "从黑体辐射到量子芯片",
      "series": "量子学技术",
-     "volume": "第四册",
+     "volume": "第一册",
      "author": "Dr. Dezeming",
      "year": "2026",
-     "pdf": "04-devices.pdf",
-     "accent": "#d8b98a",
-     "subject": "量子学技术：量子器件与硬件平台",
+     "pdf": "v1-intro.pdf",
+     "accent": "#8fb8dd",
+     "subject": "量子学技术：量子技术入门",
      "keywords": [
       "量子学技术",
-      "量子器件与硬件平台"
-     ]
+      "量子技术入门"
+     ],
+     "blurb": "一册入门铺全貌：从一九〇〇年的黑体辐射讲到二〇二四年的量子芯片，历史、原理、计算、通信、测量、硬件、纠错、产业，一条线走完，不深究细节。"
     },
-    "pdf": "04-devices.pdf",
-    "pages": 55,
-    "chapters": 12,
+    "pdf": "v1-intro.pdf",
+    "pages": 71,
+    "chapters": 18,
     "has_readme": true
    },
    {
@@ -2494,61 +2447,64 @@
      "volume": "第二册",
      "author": "Dr. Dezeming",
      "year": "2026",
-     "pdf": "02-foundations.pdf",
+     "pdf": "v2-foundations.pdf",
      "accent": "#9fc4e8",
      "subject": "量子学技术：量子力学与实验基础",
      "keywords": [
       "量子学技术",
       "量子力学与实验基础"
-     ]
+     ],
+     "blurb": "从黑体辐射到单光子，再到自旋、隧穿、全同粒子与测量之争，把量子力学的实验基础一块块拆开，最后换成数学的写法。"
     },
-    "pdf": "02-foundations.pdf",
-    "pages": 74,
-    "chapters": 14,
+    "pdf": "v2-foundations.pdf",
+    "pages": 106,
+    "chapters": 20,
     "has_readme": true
    },
    {
-    "dir": "intro",
+    "dir": "computing",
     "bookjson": {
-     "title": "量子技术入门",
-     "subtitle": "从黑体辐射到量子芯片",
+     "title": "量子计算与算法",
+     "subtitle": "从量子比特到因式分解",
      "series": "量子学技术",
-     "volume": "第一册",
+     "volume": "第三册",
      "author": "Dr. Dezeming",
      "year": "2026",
-     "pdf": "01-intro.pdf",
-     "accent": "#8fb8dd",
-     "subject": "量子学技术：量子技术入门",
+     "pdf": "v3-computing.pdf",
+     "accent": "#a8c8a4",
+     "subject": "量子学技术：量子计算与算法",
      "keywords": [
       "量子学技术",
-      "量子技术入门"
-     ]
+      "量子计算与算法"
+     ],
+     "blurb": "从态矢量、算符、纠缠一直讲到 Shor、线路编译、复杂度边界与变分算法。既讲能算什么，也讲算不动什么。"
     },
-    "pdf": "01-intro.pdf",
-    "pages": 50,
-    "chapters": 14,
+    "pdf": "v3-computing.pdf",
+    "pages": 102,
+    "chapters": 19,
     "has_readme": true
    },
    {
-    "dir": "network",
+    "dir": "devices",
     "bookjson": {
-     "title": "量子通信与量子网络",
-     "subtitle": "从 BB84 到量子互联网",
+     "title": "量子器件与硬件平台",
+     "subtitle": "超导、离子、原子与光子",
      "series": "量子学技术",
-     "volume": "第六册",
+     "volume": "第四册",
      "author": "Dr. Dezeming",
      "year": "2026",
-     "pdf": "06-network.pdf",
-     "accent": "#93b8c4",
-     "subject": "量子学技术：量子通信与量子网络",
+     "pdf": "v4-devices.pdf",
+     "accent": "#d8b98a",
+     "subject": "量子学技术：量子器件与硬件平台",
      "keywords": [
       "量子学技术",
-      "量子通信与量子网络"
-     ]
+      "量子器件与硬件平台"
+     ],
+     "blurb": "真实机器的样子：超导、离子阱、中性原子、光子、半导体，以及低温、薄膜工艺、封装、测控这些决定成败的工程。"
     },
-    "pdf": "06-network.pdf",
-    "pages": 48,
-    "chapters": 9,
+    "pdf": "v4-devices.pdf",
+    "pages": 96,
+    "chapters": 19,
     "has_readme": true
    },
    {
@@ -2560,24 +2516,47 @@
      "volume": "第五册",
      "author": "Dr. Dezeming",
      "year": "2026",
-     "pdf": "05-qec.pdf",
+     "pdf": "v5-qec.pdf",
      "accent": "#c9a6c0",
      "subject": "量子学技术：量子纠错与容错",
      "keywords": [
       "量子学技术",
       "量子纠错与容错"
-     ]
+     ],
+     "blurb": "噪声是量子计算最硬的墙。从稳定子、表面码到玻色码、魔术态蒸馏、解码器与整机架构，附 2023 年以来的实验进展。"
     },
-    "pdf": "05-qec.pdf",
-    "pages": 33,
-    "chapters": 9,
+    "pdf": "v5-qec.pdf",
+    "pages": 81,
+    "chapters": 15,
+    "has_readme": true
+   },
+   {
+    "dir": "network",
+    "bookjson": {
+     "title": "量子通信与量子网络",
+     "subtitle": "从 BB84 到量子互联网",
+     "series": "量子学技术",
+     "volume": "第六册",
+     "author": "Dr. Dezeming",
+     "year": "2026",
+     "pdf": "v6-network.pdf",
+     "accent": "#93b8c4",
+     "subject": "量子学技术：量子通信与量子网络",
+     "keywords": [
+      "量子学技术",
+      "量子通信与量子网络"
+     ],
+     "blurb": "密钥为什么安全，代价是什么。诱骗态、测量设备无关、量子存储、纠缠纯化、卫星与网络标准，还有后量子密码的迁移。"
+    },
+    "pdf": "v6-network.pdf",
+    "pages": 77,
+    "chapters": 15,
     "has_readme": true
    }
-  ],
-  "single": false
+  ]
  },
  "黑客技术": {
-  "path": "黑客技术",
+  "path": "E:\\Study\\黑客技术",
   "books": [
    {
     "dir": "beginner",
@@ -2590,7 +2569,7 @@
      "volume": "入门篇",
      "subtitle": "从病毒史到攻防全景",
      "volume_no": 1,
-     "pdf": "beginner.pdf",
+     "pdf": "v1-beginner.pdf",
      "accent": "#0f5c5c",
      "accent_light": "#7fb0b2",
      "accent_ink": "#14312f",
@@ -2605,40 +2584,9 @@
       "这一册从 1971 年的第一只病毒讲到 2026 年的勒索产业，再从晶体管、内存、系统调用一路讲到栈溢出、中间人攻击和供应链投毒。读完它，你不会立刻变成安全专家，但再看那些耸人听闻的新闻时，你能判断出危险究竟发生在哪一层。"
      ]
     },
-    "pdf": "beginner.pdf",
-    "pages": 199,
-    "chapters": 24,
-    "has_readme": true
-   },
-   {
-    "dir": "practice",
-    "bookjson": {
-     "series": "黑客技术与安全原理",
-     "author": "Dr. Dezeming",
-     "year": "2026",
-     "toc_sections": false,
-     "title": "黑客技术与安全原理",
-     "volume": "实战篇",
-     "subtitle": "从靶场到真实对抗",
-     "volume_no": 3,
-     "pdf": "practice.pdf",
-     "accent": "#8c3f2a",
-     "accent_light": "#d9a58f",
-     "accent_ink": "#3d1d13",
-     "cover_image": "E:/Study/0-logo/logo11.png",
-     "back_image": "E:/Study/0-logo/logo13.png",
-     "tagline": "在自己的靶场里把每条路走一遍",
-     "keywords": "渗透测试, 靶场, 提权, 横向移动, 应急响应, 检测工程",
-     "meta1": "这一册写给想真正上手的人，所有练习都在自己搭的环境里完成。",
-     "meta2": "动手之前先读授权与法律那一节。",
-     "blurb": [
-      "从一台干净的虚拟机开始，搭隔离网络、装靶场、配工具链，然后在里面完成侦察、验证、利用、提权、横向和清理。每一章都有可复现的步骤和判断依据，不是命令清单。",
-      "后半册转向防守，讲样本分析、检测规则、日志狩猎和应急响应。攻击与防守用同一套实验环境，做完红队再做蓝队，才知道哪些告警真的有用。"
-     ]
-    },
-    "pdf": "practice.pdf",
-    "pages": 192,
-    "chapters": 18,
+    "pdf": "v1-beginner.pdf",
+    "pages": 325,
+    "chapters": 30,
     "has_readme": true
    },
    {
@@ -2652,7 +2600,7 @@
      "volume": "理论篇",
      "subtitle": "漏洞、内存与协议的深层结构",
      "volume_no": 2,
-     "pdf": "theory.pdf",
+     "pdf": "v2-theory.pdf",
      "accent": "#26456b",
      "accent_light": "#8aa6c8",
      "accent_ink": "#16283f",
@@ -2667,68 +2615,47 @@
       "它不教你点哪个按钮。它解释那些按钮背后成立与不成立的条件，以及在什么情况下这些条件会失效。读完能自己判断一篇漏洞分析写得对不对。"
      ]
     },
-    "pdf": "theory.pdf",
-    "pages": 147,
-    "chapters": 16,
+    "pdf": "v2-theory.pdf",
+    "pages": 236,
+    "chapters": 22,
+    "has_readme": true
+   },
+   {
+    "dir": "practice",
+    "bookjson": {
+     "series": "黑客技术与安全原理",
+     "author": "Dr. Dezeming",
+     "year": "2026",
+     "toc_sections": false,
+     "title": "黑客技术与安全原理",
+     "volume": "实战篇",
+     "subtitle": "从靶场到真实对抗",
+     "volume_no": 3,
+     "pdf": "v3-practice.pdf",
+     "accent": "#8c3f2a",
+     "accent_light": "#d9a58f",
+     "accent_ink": "#3d1d13",
+     "cover_image": "E:/Study/0-logo/logo11.png",
+     "back_image": "E:/Study/0-logo/logo13.png",
+     "tagline": "在自己的靶场里把每条路走一遍",
+     "keywords": "渗透测试, 靶场, 提权, 横向移动, 应急响应, 检测工程",
+     "meta1": "这一册写给想真正上手的人，所有练习都在自己搭的环境里完成。",
+     "meta2": "动手之前先读授权与法律那一节。",
+     "blurb": [
+      "从一台干净的虚拟机开始，搭隔离网络、装靶场、配工具链，然后在里面完成侦察、验证、利用、提权、横向和清理。每一章都有可复现的步骤和判断依据，不是命令清单。",
+      "后半册转向防守，讲样本分析、检测规则、日志狩猎和应急响应。攻击与防守用同一套实验环境，做完红队再做蓝队，才知道哪些告警真的有用。"
+     ]
+    },
+    "pdf": "v3-practice.pdf",
+    "pages": 239,
+    "chapters": 24,
     "has_readme": true
    }
-  ],
-  "single": false
+  ]
  },
  "人体参数化技术\\人体参数化技术学习": {
-  "path": "人体参数化技术\\人体参数化技术学习",
+  "path": "E:\\Study\\人体参数化技术\\人体参数化技术学习",
   "books": [
-   {
-    "dir": "body",
-    "bookjson": {
-     "order": 3,
-     "title": "人体参数化技术",
-     "volume": "人体册",
-     "subtitle": "专业篇二：人体与参数化模型",
-     "author": "Dr. Dezeming",
-     "edition": "2026 年 · 第一版",
-     "pdf": "php-body.pdf",
-     "toc_sections": true
-    },
-    "pdf": "php-body.pdf",
-    "pages": 52,
-    "chapters": 4,
-    "has_readme": false
-   },
-   {
-    "dir": "face-hand",
-    "bookjson": {
-     "order": 5,
-     "title": "人体参数化技术",
-     "volume": "脸手册",
-     "subtitle": "专业篇四：人脸与人手",
-     "author": "Dr. Dezeming",
-     "edition": "2026 年 · 第一版",
-     "pdf": "php-face-hand.pdf",
-     "toc_sections": true
-    },
-    "pdf": "php-face-hand.pdf",
-    "pages": 69,
-    "chapters": 7,
-    "has_readme": false
-   },
-   {
-    "dir": "frontier",
-    "bookjson": {
-     "order": 6,
-     "title": "人体参数化技术",
-     "volume": "前沿册",
-     "subtitle": "专业篇五：动物模型与前沿",
-     "author": "Dr. Dezeming",
-     "edition": "2026 年 · 第一版",
-     "pdf": "php-frontier.pdf",
-     "toc_sections": true
-    },
-    "pdf": "php-frontier.pdf",
-    "pages": 49,
-    "chapters": 5,
-    "has_readme": false
-   },
    {
     "dir": "intro",
     "bookjson": {
@@ -2738,13 +2665,13 @@
      "subtitle": "入门篇：用几十个参数描述一个人",
      "author": "Dr. Dezeming",
      "edition": "2026 年 · 第一版",
-     "pdf": "php-intro.pdf",
+     "pdf": "v1-intro.pdf",
      "toc_sections": false
     },
-    "pdf": "php-intro.pdf",
-    "pages": 63,
+    "pdf": "v1-intro.pdf",
+    "pages": 81,
     "chapters": 8,
-    "has_readme": false
+    "has_readme": true
    },
    {
     "dir": "math",
@@ -2755,13 +2682,30 @@
      "subtitle": "专业篇一：数学与几何",
      "author": "Dr. Dezeming",
      "edition": "2026 年 · 第一版",
-     "pdf": "php-math.pdf",
+     "pdf": "v2-math.pdf",
      "toc_sections": true
     },
-    "pdf": "php-math.pdf",
-    "pages": 99,
+    "pdf": "v2-math.pdf",
+    "pages": 142,
     "chapters": 7,
-    "has_readme": false
+    "has_readme": true
+   },
+   {
+    "dir": "body",
+    "bookjson": {
+     "order": 3,
+     "title": "人体参数化技术",
+     "volume": "人体册",
+     "subtitle": "专业篇二：人体与参数化模型",
+     "author": "Dr. Dezeming",
+     "edition": "2026 年 · 第一版",
+     "pdf": "v3-body.pdf",
+     "toc_sections": true
+    },
+    "pdf": "v3-body.pdf",
+    "pages": 94,
+    "chapters": 4,
+    "has_readme": true
    },
    {
     "dir": "recon",
@@ -2772,15 +2716,262 @@
      "subtitle": "专业篇三：从图像到人体",
      "author": "Dr. Dezeming",
      "edition": "2026 年 · 第一版",
-     "pdf": "php-recon.pdf",
+     "pdf": "v4-recon.pdf",
      "toc_sections": true
     },
-    "pdf": "php-recon.pdf",
-    "pages": 45,
+    "pdf": "v4-recon.pdf",
+    "pages": 83,
     "chapters": 5,
+    "has_readme": true
+   },
+   {
+    "dir": "face-hand",
+    "bookjson": {
+     "order": 5,
+     "title": "人体参数化技术",
+     "volume": "脸手册",
+     "subtitle": "专业篇四：人脸与人手",
+     "author": "Dr. Dezeming",
+     "edition": "2026 年 · 第一版",
+     "pdf": "v5-face-hand.pdf",
+     "toc_sections": true
+    },
+    "pdf": "v5-face-hand.pdf",
+    "pages": 109,
+    "chapters": 7,
+    "has_readme": true
+   },
+   {
+    "dir": "frontier",
+    "bookjson": {
+     "order": 6,
+     "title": "人体参数化技术",
+     "volume": "前沿册",
+     "subtitle": "专业篇五：动物模型与前沿",
+     "author": "Dr. Dezeming",
+     "edition": "2026 年 · 第一版",
+     "pdf": "v6-frontier.pdf",
+     "toc_sections": true
+    },
+    "pdf": "v6-frontier.pdf",
+    "pages": 86,
+    "chapters": 5,
+    "has_readme": true
+   }
+  ]
+ },
+ "摄影学技术": {
+  "path": "E:\\Study\\摄影学技术",
+  "books": [
+   {
+    "dir": "book",
+    "bookjson": {},
+    "pdf": "v1-photography-book.pdf",
+    "pages": 104,
+    "chapters": 20,
     "has_readme": false
    }
-  ],
-  "single": false
+  ]
+ },
+ "深度学习的可解释性研究": {
+  "path": "E:\\Study\\深度学习的可解释性研究",
+  "books": [
+   {
+    "dir": "v1-seeing-the-black-box",
+    "bookjson": {
+     "title": "打开黑箱",
+     "subtitle": "神经网络可解释性入门",
+     "pdf": "v1-seeing-the-black-box.pdf",
+     "cover_tag": "INTERPRETABILITY / VOL. 1",
+     "cover_note": "从 1943 年的一个神经元，到 2026 年的一场争论<br>十九章，把可解释性研究的地图走一遍",
+     "back_text": "一个网络把猫认成猫，它内部到底发生了什么？<br>这个问题比深度学习本身还要早。<br><br>这本书从感知机和卷积讲起，经过卷积核可视化、显著性图、类激活映射、LIME 与 SHAP、探针与概念，一路讲到叠加态、稀疏自编码器和电路追踪，最后停在今天仍没有答案的地方。",
+     "keywords": "可解释性, 神经网络, 机制可解释性, 叠加, 稀疏自编码器",
+     "year": "2026",
+     "slug": "v1-seeing-the-black-box",
+     "author": "Dr. Dezeming",
+     "back_tags": "神经元　·　感知机　·　卷积网络　·　可视化<br>归因　·　探针　·　电路　·　叠加　·　稀疏自编码器"
+    },
+    "pdf": "v1-seeing-the-black-box.pdf",
+    "pages": 181,
+    "chapters": 19,
+    "has_readme": true
+   },
+   {
+    "dir": "v2-features-circuits",
+    "bookjson": {
+     "title": "特征、电路与叠加",
+     "subtitle": "机制可解释性的方法与问题",
+     "pdf": "v2-features-circuits.pdf",
+     "cover_tag": "INTERPRETABILITY / VOL. 2",
+     "cover_note": "把网络看成特征与特征的运算<br>再从一条方向走到一整条电路",
+     "back_text": "如果每个神经元都同时管着好几件事，我们还能读懂网络吗？<br>叠加态给出了一个悲观的答案，稀疏自编码器给出了一个昂贵的出路。<br><br>这本书讲机制可解释性的核心工具：特征方向、叠加的数学、稀疏字典、注意力电路、因果干预与自动归因，也讲这些工具在哪里失效。",
+     "keywords": "机制可解释性, 叠加, 稀疏自编码器, 电路, 因果干预",
+     "year": "2026",
+     "slug": "v2-features-circuits",
+     "author": "Dr. Dezeming",
+     "back_tags": "特征方向　·　叠加　·　字典学习　·　跨层转码器<br>注意力电路　·　因果干预　·　自动归因"
+    },
+    "pdf": "v2-features-circuits.pdf",
+    "pages": 127,
+    "chapters": 13,
+    "has_readme": true
+   },
+   {
+    "dir": "v3-geometry-of-representation",
+    "bookjson": {
+     "title": "表征的几何",
+     "subtitle": "探针、概念与空间结构",
+     "pdf": "v3-geometry-of-representation.pdf",
+     "cover_tag": "INTERPRETABILITY / VOL. 3",
+     "cover_note": "隐藏层不是一个数字列表<br>它是一个有方向、有距离、有形状的空间",
+     "back_text": "探针能读出信息，却读不出网络是否在用这些信息。<br>相似度能量出两层有多像，却说不清它们差在哪里。<br><br>这本书从线性探针讲到 CKA、本征维度、概念擦除、因果追踪与世界模型，讨论怎样从表征的几何形状里，读出模型对世界的理解。",
+     "keywords": "表征分析, 探针, CKA, 概念擦除, 世界模型",
+     "year": "2026",
+     "slug": "v3-geometry-of-representation",
+     "author": "Dr. Dezeming",
+     "back_tags": "线性探针　·　相似度　·　本征维度　·　概念几何<br>因果追踪　·　世界模型　·　多模态　·　普适性"
+    },
+    "pdf": "v3-geometry-of-representation.pdf",
+    "pages": 119,
+    "chapters": 11,
+    "has_readme": true
+   },
+   {
+    "dir": "v4-limits-of-explanation",
+    "bookjson": {
+     "title": "解释的边界",
+     "subtitle": "评测、审计与安全",
+     "pdf": "v4-limits-of-explanation.pdf",
+     "cover_tag": "INTERPRETABILITY / VOL. 4",
+     "cover_note": "一个解释听起来合理，和它真的说明问题<br>是两件完全不同的事",
+     "back_text": "显著性图会被一条随机噪声骗过，漂亮的特征解释可能只是错觉。<br>可解释性要成为工程和监管能用的东西，先得能自己被检验。<br><br>这本书讲忠实性、评测基准、安全审计、探针监控、欺骗检测、模型编辑与人机沟通，也讲这个领域目前最诚实的边界。",
+     "keywords": "可解释性评测, 安全审计, 探针监控, 模型编辑, AI 法规",
+     "year": "2026",
+     "slug": "v4-limits-of-explanation",
+     "author": "Dr. Dezeming",
+     "back_tags": "忠实性　·　评测　·　审计　·　探针监控<br>欺骗检测　·　模型编辑　·　人机沟通　·　法规"
+    },
+    "pdf": "v4-limits-of-explanation.pdf",
+    "pages": 105,
+    "chapters": 11,
+    "has_readme": true
+   }
+  ]
+ },
+ "深度学习的测试时训练技术": {
+  "path": "E:\\Study\\深度学习的测试时训练技术",
+  "books": [
+   {
+    "dir": "beginner",
+    "bookjson": {
+     "id": "beginner",
+     "no": "01",
+     "series": "测试时训练技术",
+     "title": "入门篇",
+     "subtitle": "从分布漂移到测试时学习，一张能看懂的全景地图",
+     "pdf": "v1-beginner.pdf",
+     "author": "Dr. Dezeming",
+     "year": "2026",
+     "accent": "#2E6BB0",
+     "accent_soft": "#EDF3FB",
+     "toc_depth": 2,
+     "keywords": [
+      "test-time training",
+      "test-time adaptation",
+      "distribution shift",
+      "深度学习"
+     ]
+    },
+    "pdf": "v1-beginner.pdf",
+    "pages": 178,
+    "chapters": 11,
+    "has_readme": true
+   },
+   {
+    "dir": "mastery",
+    "bookjson": {
+     "id": "mastery",
+     "no": "02",
+     "series": "测试时训练技术",
+     "title": "精通篇",
+     "subtitle": "目标函数、稳定性与工程实现",
+     "pdf": "v2-mastery.pdf",
+     "author": "Dr. Dezeming",
+     "year": "2026",
+     "accent": "#6A4FA3",
+     "accent_soft": "#F2EEFA",
+     "toc_depth": 2,
+     "keywords": [
+      "test-time training",
+      "test-time adaptation",
+      "entropy minimization",
+      "TTT layers"
+     ]
+    },
+    "pdf": "v2-mastery.pdf",
+    "pages": 211,
+    "chapters": 12,
+    "has_readme": true
+   }
+  ]
+ },
+ "全脑连接模拟技术": {
+  "path": "E:\\Study\\全脑连接模拟技术",
+  "books": [
+   {
+    "dir": "intro",
+    "bookjson": {
+     "series": "全脑仿真",
+     "title": "从神经元到果蝇大脑",
+     "subtitle": "全脑仿真入门",
+     "volume": "01",
+     "pdf": "v1-intro.pdf",
+     "author": "Dr. Dezeming",
+     "year": "2026",
+     "accent": "#1f4e79",
+     "cover": "images/cover.jpg",
+     "back": "images/back.jpg",
+     "blurb": "一只果蝇的脑被完整测绘、被放进虚拟身体，然后开始行走、觅食、梳理触角。这件事是怎么发生的，之前的八十年又发生了什么。",
+     "keywords": [
+      "全脑仿真",
+      "连接组",
+      "计算神经科学",
+      "果蝇"
+     ],
+     "toc_depth": 2
+    },
+    "pdf": "v1-intro.pdf",
+    "pages": 143,
+    "chapters": 13,
+    "has_readme": true
+   },
+   {
+    "dir": "theory",
+    "bookjson": {
+     "series": "全脑仿真",
+     "title": "连接组、动力学与仿真",
+     "subtitle": "全脑仿真理论专精",
+     "volume": "02",
+     "pdf": "v2-theory.pdf",
+     "author": "Dr. Dezeming",
+     "year": "2026",
+     "accent": "#2f5d50",
+     "cover": "images/cover.jpg",
+     "back": "images/back.jpg",
+     "blurb": "把一张接线图变成一组方程，再把方程变成可运行的系统。中间每一步的假设、代价与边界，都在这里展开。",
+     "keywords": [
+      "计算神经科学",
+      "霍奇金赫胥黎模型",
+      "网络动力学",
+      "连接组"
+     ],
+     "toc_depth": 2
+    },
+    "pdf": "v2-theory.pdf",
+    "pages": 126,
+    "chapters": 12,
+    "has_readme": true
+   }
+  ]
  }
 }

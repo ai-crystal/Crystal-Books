@@ -144,13 +144,24 @@ def book_info(s, d):
     pdf = s.get("pdf_override", {}).get(d) or bj.get("pdf")
     if not pdf and s.get("single"):
         pdf = s["single"]["pdf"]
+    def _newest(files):
+        files = [f for f in files if f.lower().endswith(".pdf")]
+        if not files:
+            return None
+        return max(files, key=lambda f: os.path.getmtime(os.path.join(s["path"], "output", f)))
+
     if pdf and not os.path.exists(os.path.join(s["path"], "output", pdf)):
-        cand = [f for f in os.listdir(os.path.join(s["path"], "output")) if os.path.splitext(f)[0] == os.path.splitext(pdf)[0]]
-        if cand:
-            pdf = cand[0]
+        out = os.path.join(s["path"], "output")
+        stem = os.path.splitext(pdf)[0]
+        cand = [f for f in os.listdir(out) if os.path.splitext(f)[0] == stem] if os.path.isdir(out) else []
+        pick = cand[0] if cand else None
+        if not pick and os.path.isdir(out):
+            # book.json 里的文件名可能已过期：按册目录名 + 取最新
+            pick = _newest([f for f in os.listdir(out) if d in os.path.basename(f)])
+        if pick:
+            pdf = pick
     pages = s.get("pages_override", {}).get(d)
-    if pages is None:
-        pages = pages_for(s["path"], d)
+    # 页数以 output 里的 PDF 为准：重新编译后无需手工同步 inventory.json
     if pages is None and pdf:
         pp = os.path.join(s["path"], "output", pdf)
         if os.path.exists(pp):
@@ -160,6 +171,8 @@ def book_info(s, d):
                     pages = doc.page_count
             except Exception:
                 pass
+    if pages is None:
+        pages = pages_for(s["path"], d)
     if s.get("single"):
         title = s["name"]
         one = s["subtitle"]
